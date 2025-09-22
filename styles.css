@@ -358,6 +358,39 @@ section {
     border-left: 4px solid var(--accent-color);
 }
 
+/* Presentations Section */
+.presentations {
+    background-color: var(--surface);
+}
+
+.presentation {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.presentation:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pres-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.pres-venue {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-weight: 500;
+}
+
 .collaboration-item {
     margin-bottom: 1.5rem;
     padding: 1.5rem;
