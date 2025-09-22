@@ -363,19 +363,29 @@ section {
     background-color: var(--surface);
 }
 
-.presentation {
+.presentation-box {
     background: white;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid var(--accent-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.presentation:hover {
-    transform: translateX(5px);
+.presentation-box:hover {
+    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+}
+
+.presentation-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.presentation-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
 .pres-title {
