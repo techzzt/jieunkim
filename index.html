@@ -3,253 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jieun Kim</title>
+    <meta name="description" content="Jieun Kim - Research Intern at KIST focusing on Trustworthy ML, Model Reliability & Robustness, Representation Learning, and Brain-Inspired AI.">
+    <title>Jieun Kim | Researcher in Brain-Inspired AI & ML</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Jieun Kim</h2>
-            </div>
+            <a href="#home" class="nav-logo">
+                <span class="logo-name">Jieun Kim</span>
+                <span class="logo-title">KIST Research Intern</span>
+            </a>
             <div class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#research" class="nav-link">Research</a>
                 <a href="#publications" class="nav-link">Publications</a>
-                <a href="#presentations" class="nav-link">Presentations</a> 
+                <a href="#presentations" class="nav-link">Presentations</a>
+                <a href="#teaching" class="nav-link">Teaching & Service</a>
+                <a href="#awards" class="nav-link">Awards</a>
+                <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-content">
+            <div class="container hero-container">
                 <div class="hero-text">
-                    <h1>Hi, I'm Jieun!</h1>
+                    <div class="badge-status">
+                        <span class="pulse-dot"></span> Research Intern @ KIST Brain Science Institute
+                    </div>
+                    <h1>Jieun Kim</h1>
+                    <p class="hero-subtitle">
+                        Investigating <strong>Trustworthy Machine Learning</strong>, <strong>Model Reliability & Robustness</strong>, <strong>Representation Learning</strong>, and <strong>Brain-Inspired AI</strong>
+                    </p>
+                    
                     <p class="intro-text">
-                        I am a Research Intern at Korea Institute of Science and Technology, working on developing 
-                        neural network models and learning rules guided by neuroscience. My research focuses on 
-                        developing neural network models and learning rules guided by neuroscience, with the goal 
-                        of computationally interpreting these networks to understand their underlying mechanisms.
+                        I am a Research Intern at the <strong>Korea Institute of Science and Technology (KIST)</strong> under the supervision of <strong>Dr. Taegon Kim</strong>. My computational research focuses on constructing large-scale spiking neuron network (SNN) architectures and understanding circuit dynamics in cortico-basal ganglia loops. By computationally modeling neural synchronization and motor/non-motor symptom comorbidity in Parkinson's disease, I aim to develop robust brain-inspired AI frameworks and adaptive deep brain stimulation (DBS) strategies.
                     </p>
                     <p class="intro-text">
-                        I received my M.S. in Industrial and Management Engineering from Korea University, South Korea, 
-                        where I worked with Professor Jungeol Baek on anomaly detection systems and multivariate 
-                        time-series analysis. I also hold a B.S. in Statistics and Computer Science from Sookmyung 
-                        Women's University, where I developed strong foundations in statistical modeling and computational methods.
+                        I received my <strong>M.S. in Industrial and Management Engineering</strong> from <strong>Korea University</strong> (Advisor: Prof. Jun-Geol Baek), where I engineered multivariate time-series representation architectures and transformer-based missing value imputation models. I hold a <strong>B.S. in Statistics & Computer Science</strong> from <strong>Sookmyung Women's University</strong> (Advisor: Prof. Young-Geun Choi).
                     </p>
-                    <p class="intro-text">
-                        My current research aims to create persistent and robust decision-making systems capable of 
-                        functioning in complex, unstructured environments. I am particularly interested in how intelligent 
-                        systems can have profound societal impact in areas such as environmental monitoring, search and 
-                        rescue operations, and cargo or passenger transportation through neuroscience-inspired approaches.
-                    </p>
+
+                    <!-- Research Interest Badges -->
+                    <div class="interests-container">
+                        <span class="interest-badge"><i class="fas fa-brain"></i> Brain-Inspired AI</span>
+                        <span class="interest-badge"><i class="fas fa-shield-alt"></i> Trustworthy Machine Learning</span>
+                        <span class="interest-badge"><i class="fas fa-project-diagram"></i> Model Reliability & Robustness</span>
+                        <span class="interest-badge"><i class="fas fa-network-wired"></i> Representation Learning</span>
+                    </div>
+
                     <div class="hero-buttons">
-                        <a href="CV_JieunKim.pdf" class="btn btn-primary" target="_blank">
-                            <i class="fas fa-file-pdf"></i> CV
+                        <a href="CV_JieunKim.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+                            <i class="fas fa-file-pdf"></i> Download CV (PDF)
                         </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i> Contact
+                        <a href="https://github.com/techzzt" class="btn btn-secondary" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="mailto:jieunkim.cs@gmail.com" class="btn btn-tertiary">
+                            <i class="fas fa-envelope"></i> Contact Me
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="research">
+        <!-- Research Experience Section -->
+        <section id="research" class="research section-padding">
             <div class="container">
-                <h2 class="section-title">Research Experience</h2>
-                
-                <div class="highlight-card">
-                    <div class="highlight-content">
-                        <h3>Computational Model for Spiking Neural Networks and Brain-Inspired Models</h3>
-                        <p class="research-period">May 2024 - Present | Korea Institute of Science and Technology</p>
-                        <p>
-                            Developing computational models using spiking neural networks to understand brain functionality 
-                            and create brain-inspired AI systems. This research focuses on how spatially organized connectivity 
-                            influences information transfer within motor cortex networks, providing a unique geometric 
-                            perspective on neural computation. The work on understanding topographic input structures directly 
-                            relates to developing robust neural representations for advanced AI applications.
-                        </p>
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-title">Research Experience</h2>
+                    <p class="section-subtitle">Deep dive into brain-inspired computational modeling, generative time-series anomaly detection, and statistical inference</p>
                 </div>
 
-                <div class="highlight-card">
-                    <div class="highlight-content">
-                        <h3>Neural ODE Networks for Irregular Time Series Spike Detection</h3>
-                        <p class="research-period">Aug 2023 - Feb 2024 | Georgia Institute of Technology</p>
-                        <p>
-                            Developed neural ODE (Ordinary Differential Equation) networks for spike detection in irregular 
-                            time series data. This approach leverages continuous-time modeling to better capture the temporal 
-                            dynamics and irregular patterns in complex time-series datasets, improving detection accuracy 
-                            for spiking events in building sensor data.
-                        </p>
-                    </div>
-                </div>
+                <div class="timeline">
+                    <!-- KIST -->
+                    <div class="timeline-card highlight-border">
+                        <div class="card-header">
+                            <div class="org-info">
+                                <span class="org-icon"><i class="fas fa-brain"></i></span>
+                                <div>
+                                    <h3>Korea Institute of Science and Technology (KIST)</h3>
+                                    <p class="role">Research Intern | Advisor: Dr. Taegon Kim</p>
+                                </div>
+                            </div>
+                            <span class="date-badge">May 2024 – Feb 2026</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="research-detail-grid">
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
+                                    <p>Investigating topographic cortico-basal ganglia computational circuits to computationally model the emergence of both motor and non-motor symptom comorbidities in Parkinson’s disease (PD). The overarching goal is to understand how altered spiking dynamics and network-level synchronization degrade signal processing in neural systems.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <ul class="experience-bullets">
+                                        <li>Constructed large-scale Spiking Neural Networks (SNNs) incorporating realistic anatomical connectivity, topographic input projections, and synaptic plasticity parameters.</li>
+                                        <li>Quantitative simulation of population spiking activity and phase-locking neural synchronization across baseline vs. dopamine-depleted pathological states.</li>
+                                        <li>Extracted dynamic biomarkers to optimize predictive algorithms and metrics for adaptive closed-loop Deep Brain Stimulation (aDBS).</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                <div class="highlight-card">
-                    <div class="highlight-content">
-                        <h3>Deep Network-based Representation Enhancement for Time Series Data</h3>
-                        <p class="research-period">March 2021 - Feb 2023 | Korea University</p>
-                        <p>
-                            Designed deep network-based systems to enhance representation learning for multivariate time-series 
-                            data. To address the challenge of missing areas in time series data, I proposed transformer-based 
-                            networks for representation enhancement. This research focused on improving the quality and 
-                            robustness of learned representations from incomplete temporal data, collaborating with Hyundai 
-                            on real-world automotive applications.
-                        </p>
+                            <div class="project-tech-tags">
+                                <span class="mini-tag">Spiking Neural Networks (SNN)</span>
+                                <span class="mini-tag">Parkinson's Disease Dynamics</span>
+                                <span class="mini-tag">Adaptive DBS</span>
+                                <span class="mini-tag">Neural Synchronization</span>
+                                <span class="mini-tag">Brian2 Simulator</span>
+                            </div>
+
+                            <!-- Figure Slot Container -->
+                            <div class="figure-slot-wrapper">
+                                <div class="figure-slot-header">
+                                    <i class="fas fa-image"></i>
+                                    <span>Research Visualization / Figure Container</span>
+                                </div>
+                                <div class="figure-slot-placeholder">
+                                    <p><i class="fas fa-project-diagram"></i> Diagram / Circuit Architecture Figure for Basal Ganglia SNN Model will be presented here.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Georgia Tech -->
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="org-info">
+                                <span class="org-icon"><i class="fas fa-university"></i></span>
+                                <div>
+                                    <h3>Georgia Institute of Technology (Georgia Tech, USA)</h3>
+                                    <p class="role">Visiting Researcher | Advisor: Prof. Jungho Lewe</p>
+                                </div>
+                            </div>
+                            <span class="date-badge">Aug 2023 – Feb 2024</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="research-detail-grid">
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
+                                    <p>Engineered deep generative models capable of detecting complex anomaly spikes and temporal irregular patterns in high-frequency multidimensional building sensor time-series data.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <ul class="experience-bullets">
+                                        <li>Developed temporal Generative Adversarial Network (GAN) architectures paired with continuous-time differential modeling (Neural ODEs) to handle irregularly sampled multivariate sensor series.</li>
+                                        <li>Evaluated anomaly scoring metrics across continuous time horizons, achieving enhanced sensitivity to sudden transient spikes and long-term system drift.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="mini-tag">Deep GANs</span>
+                                <span class="mini-tag">Neural ODEs</span>
+                                <span class="mini-tag">Multidimensional Anomaly Spikes</span>
+                                <span class="mini-tag">Time-Series Sensing</span>
+                            </div>
+
+                            <div class="figure-slot-wrapper">
+                                <div class="figure-slot-header">
+                                    <i class="fas fa-image"></i>
+                                    <span>Research Visualization / Figure Container</span>
+                                </div>
+                                <div class="figure-slot-placeholder">
+                                    <p><i class="fas fa-chart-line"></i> Temporal Anomaly Spike Detection & GAN Architecture Figure Container</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Korea University -->
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="org-info">
+                                <span class="org-icon"><i class="fas fa-graduation-cap"></i></span>
+                                <div>
+                                    <h3>Korea University</h3>
+                                    <p class="role">Graduate Researcher | Advisor: Prof. Jun-Geol Baek</p>
+                                </div>
+                            </div>
+                            <span class="date-badge">Mar 2021 – Feb 2023</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="research-detail-grid">
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
+                                    <p>Advanced multivariate time-series representation enhancement, missing value imputation, and predictive Remaining Useful Life (RUL) modeling for industrial telemetry and complex system operational logs.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <ul class="experience-bullets">
+                                        <li>Designed a multiple encoder framework tailored for multivariate anomaly detection under varying normality conditions.</li>
+                                        <li>Developed a novel distribution-based Transformer framework for probabilistic time-series missing value imputation (Master's Thesis).</li>
+                                        <li>Formulated data-driven causal inference models to isolate systemic failure variables in high-dimensional vehicle logs in collaboration with Hyundai Motor Group.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="mini-tag">Transformers Imputation</span>
+                                <span class="mini-tag">Multiple Encoder Architectures</span>
+                                <span class="mini-tag">Remaining Useful Life (RUL)</span>
+                                <span class="mini-tag">Causal Inference</span>
+                                <span class="mini-tag">PyTorch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sookmyung Women's Univ - Cancer Research -->
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="org-info">
+                                <span class="org-icon"><i class="fas fa-dna"></i></span>
+                                <div>
+                                    <h3>Sookmyung Women’s University & Seoul National University Hospital</h3>
+                                    <p class="role">Research Intern | Advisor: Prof. Heejoon Chae (Joint Research with SNUH)</p>
+                                </div>
+                            </div>
+                            <span class="date-badge">Jul 2019 – Jul 2020</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="research-detail-grid">
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
+                                    <p>Classifying heterogeneous breast cancer molecular subtypes by integrating high-throughput multi-omics gene expression datasets.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <ul class="experience-bullets">
+                                        <li>Engineered Multi-Layer Perceptron (MLP) neural network architectures incorporating gene expression profile normalization and dimensionality reduction.</li>
+                                        <li>Evaluated classification robustness across genomic and transcriptomic integration, publishing results in the Journal of KIISE (2020).</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="mini-tag">Multi-Omics Integration</span>
+                                <span class="mini-tag">Breast Cancer Subtyping</span>
+                                <span class="mini-tag">Deep Neural Networks (MLP)</span>
+                                <span class="mini-tag">Bioinformatics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sookmyung Women's Univ - COVID-19 -->
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="org-info">
+                                <span class="org-icon"><i class="fas fa-chart-pie"></i></span>
+                                <div>
+                                    <h3>Sookmyung Women’s University</h3>
+                                    <p class="role">Research Intern | Advisor: Prof. Yangjin Kim</p>
+                                </div>
+                            </div>
+                            <span class="date-badge">Jun 2020 – Jul 2020</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="research-detail-grid">
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
+                                    <p>Parametric survival modeling and risk factor volatility analysis using large-scale epidemiological COVID-19 patient records.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <ul class="experience-bullets">
+                                        <li>Estimated incubation period distributions and case fatality rates using parametric probability distribution functions.</li>
+                                        <li>Published statistical findings in The Korean Journal of Applied Statistics (2020).</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="mini-tag">Parametric Survival Analysis</span>
+                                <span class="mini-tag">Epidemiological Modeling</span>
+                                <span class="mini-tag">R Statistical Analysis</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="publications" class="publications">
+        <!-- Publications Section -->
+        <section id="publications" class="publications section-padding bg-alt">
             <div class="container">
-                <h2 class="section-title">Publications</h2>
-                <p class="note">*: equal contribution</p>
-                
-                <div class="publication">
-                    <h3 class="pub-title">Multiple Encoders for Anomaly Detection on Multivariate Time-series with Various Normality</h3>
-                    <p class="pub-authors">
-                        Yujin Lee, Kio Yun, <strong>Jieun Kim</strong>, Jun-Geol Baek
-                    </p>
-                    <p class="pub-venue">EAAI, 2023 | Under Review</p>
-                    <p class="pub-note">Master's thesis research on multivariate time-series anomaly detection</p>
+                <div class="section-header">
+                    <h2 class="section-title">Publications</h2>
+                    <p class="section-subtitle">Official master's thesis and peer-reviewed journal publications</p>
                 </div>
 
-                <div class="publication">
-                    <h3 class="pub-title">A distribution-based transformer framework for time series missing value imputation</h3>
-                    <p class="pub-authors">
-                        <strong>Jieun Kim</strong>
-                    </p>
-                    <p class="pub-venue">Master's thesis, Korea University, Department of Industrial Management and Engineering, 2023</p>
-                    <p class="pub-note">Advanced framework for handling missing values in time series data using transformer architecture</p>
-                </div>
-
-                <div class="publication">
-                    <h3 class="pub-title">Statistical analysis of estimating incubation period distribution and case fatality rate of COVID-19</h3>
-                    <p class="pub-authors">
-                        H. J. Ki, <strong>J. Kim</strong>, S. Kim, J. Park, J. Lee, and Y.-J. Kim
-                    </p>
-                    <p class="pub-venue">The Korean Journal of Applied Statistics, 2020</p>
-                    <p class="pub-note">Statistical modeling and analysis of COVID-19 epidemiological parameters</p>
-                </div>
-
-                <div class="publication">
-                    <h3 class="pub-title">Breast Cancer Subtype Classification Using Multi-omics Data Integration Based on Neural Network</h3>
-                    <p class="pub-authors">
-                        Joungmin Choi, Jiyoung Lee, <strong>Jieun Kim</strong>, Jihyun Kim, Heejoon Chae
-                    </p>
-                    <p class="pub-venue">Journal of KIISE, 2020</p>
-                    <p class="pub-note">Multi-omics data integration for cancer subtype classification using neural networks</p>
-                </div>
-
-                <div class="publication research-collaboration">
-                    <h3 class="pub-title">Research Collaborations</h3>
-                    <div class="collaboration-item">
-                        <h4>Breast Cancer Subtype Classification (July 2019 - July 2020)</h4>
-                        <p>Sookmyung Women's University | Advisor: Heejoon Chae</p>
-                        <p>Developed MLP structure with gene expression dataset for accurate cancer subtype classification</p>
+                <div class="publication-list">
+                    <!-- Thesis -->
+                    <div class="pub-card featured">
+                        <div class="pub-type-tag"><i class="fas fa-graduation-cap"></i> Master's Thesis</div>
+                        <h3 class="pub-title">A distribution-based transformer framework for time series missing value imputation</h3>
+                        <p class="pub-authors"><strong>J. Kim</strong>, Jun-Geol Baek</p>
+                        <p class="pub-venue">Master's Thesis, Korea University, Department of Industrial Management and Engineering, 2023</p>
+                        <p class="pub-desc">Formulated a distribution-guided Transformer architecture designed to probabilistically impute unobserved temporal intervals in complex multivariate industrial time-series datasets.</p>
                     </div>
-                    <div class="collaboration-item">
-                        <h4>COVID-19 Patient Survival Analysis (June 2020 - July 2020)</h4>
-                        <p>Sookmyung Women's University | Advisor: Yangjin Kim</p>
-                        <p>Conducted survival analysis using COVID-19 confirmed patient database with statistical modeling</p>
+
+                    <!-- COVID-19 Paper -->
+                    <div class="pub-card">
+                        <div class="pub-type-tag"><i class="fas fa-journal-whills"></i> Peer-Reviewed Journal</div>
+                        <h3 class="pub-title">Statistical analysis of estimating incubation period distribution and case fatality rate of COVID-19</h3>
+                        <p class="pub-authors">J. Ki, <strong>J. Kim</strong>, S. Kim, J. Park, J. Lee, and Y.-J. Kim</p>
+                        <p class="pub-venue">The Korean Journal of Applied Statistics, 2020</p>
+                        <p class="pub-desc">Rigorous statistical estimation of incubation parameters and mortality risks leveraging clinical cohort databases during the pandemic.</p>
+                    </div>
+
+                    <!-- Breast Cancer Paper -->
+                    <div class="pub-card">
+                        <div class="pub-type-tag"><i class="fas fa-journal-whills"></i> Peer-Reviewed Journal</div>
+                        <h3 class="pub-title">Breast Cancer Subtype Classification Using Multi-omics Data Integration Based on Neural Network</h3>
+                        <p class="pub-authors">Joungmin Choi, Jiyoung Lee, <strong>Jieun Kim</strong>, Jihyun Kim, Heejoon Chae</p>
+                        <p class="pub-venue">Journal of KIISE, 2020</p>
+                        <p class="pub-desc">Neural network framework integrating high-throughput genomic and transcriptomic features for molecular subtype stratification.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="presentations" class="presentations">
+        <!-- Presentations Section -->
+        <section id="presentations" class="presentations section-padding">
             <div class="container">
-                <h2 class="section-title">Presentations</h2>
-                
-                <div class="highlight-card">
-                    <div class="highlight-content">
-                        <h3>Topographic Cortico-Basal Ganglia Computational Model Reveals Motor and Non-motor Symptom Comorbidity in Parkinson's disease</h3>
-                        <p class="research-period">Society for Neuroscience, 2025</p>
-                        <p>
-                            Presented computational modeling research on Parkinson's disease, focusing on the relationship 
-                            between motor and non-motor symptoms through cortico-basal ganglia network analysis.
-                        </p>
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-title">Presentations</h2>
+                    <p class="section-subtitle">Conference talks and scientific poster presentations</p>
                 </div>
 
-                <div class="highlight-card">
-                    <div class="highlight-content">
-                        <h3>Computational Cortico-Basal Ganglia Model Reveals Altered Spiking Dynamics and Synchronization in Parkinson's disease</h3>
-                        <p class="research-period">KSBNS, 2025</p>
-                        <p>
-                            Demonstrated how Parkinson's disease affects spiking dynamics and neural synchronization 
-                            patterns in cortico-basal ganglia circuits using computational modeling approaches.
-                        </p>
+                <div class="presentation-grid">
+                    <div class="pres-card">
+                        <div class="pres-badge">SfN 2025</div>
+                        <h3>Topographic Cortico-Basal Ganglia Computational Model Reveals Motor and Non-motor Symptom Comorbidity in Parkinson’s disease</h3>
+                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> Society for Neuroscience (SfN), 2025</p>
                     </div>
-                </div>
 
-                <div class="highlight-card">
-                    <div class="highlight-content">
-                        <h3>Spiking Neural Network Modeling of Basal Ganglia for Parkinson's disease Prognosis and Adaptive DBS</h3>
-                        <p class="research-period">KSBNS, 2024</p>
-                        <p>
-                            Developed spiking neural network models for basal ganglia to improve Parkinson's disease 
-                            prognosis and optimize adaptive deep brain stimulation (DBS) parameters.
-                        </p>
+                    <div class="pres-card">
+                        <div class="pres-badge">KSBNS 2025</div>
+                        <h3>Computational Cortico-Basal Ganglia Model Reveals Altered Spiking Dynamics and Synchronization in Parkinson’s disease</h3>
+                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> The Korean Society for Brain and Neural Sciences (KSBNS), 2025</p>
                     </div>
-                </div>
 
-                <div class="highlight-card">
-                    <div class="highlight-content">
+                    <div class="pres-card">
+                        <div class="pres-badge">KSBNS 2024</div>
+                        <h3>Spiking Neural Network Modeling of Basal Ganglia for Parkinson’s disease Prognosis and Adaptive DBS</h3>
+                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> The Korean Society for Brain and Neural Sciences (KSBNS), 2024</p>
+                    </div>
+
+                    <div class="pres-card">
+                        <div class="pres-badge">KIIE 2022</div>
                         <h3>Fuel Cell Vehicle Fuel Efficiency Prediction via Data Refinement and Adversarial Generation</h3>
-                        <p class="research-period">Korean Institute of Industrial Engineers, 2022</p>
-                        <p>
-                            Presented machine learning approaches for fuel cell vehicle efficiency prediction using 
-                            data refinement techniques and adversarial generation methods for improved accuracy.
-                        </p>
+                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> Korean Institute of Industrial Engineers, 2022</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <!-- Teaching & Professional Service Section -->
+        <section id="teaching" class="teaching section-padding bg-alt">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <p class="contact-email">
-                            jieunkim.cs@gmail.com
-                        </p>
-                        <div class="contact-address">
-                            <p>Korea Institute of Science and Technology</p>
-                            <p>Brain Science Institute</p>
-                            <p>Seoul, South Korea</p>
+                <div class="section-header">
+                    <h2 class="section-title">Teaching & Professional Service</h2>
+                    <p class="section-subtitle">Corporate AI curriculum delivery, university teaching, and academic reviewing</p>
+                </div>
+
+                <div class="grid-2col">
+                    <!-- Corporate Instruction -->
+                    <div class="service-card">
+                        <div class="card-title-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Corporate Instructor & Programming Assistant</h3>
+                        </div>
+                        <span class="date-badge">Spring 2022 – Dec 2023</span>
+                        <p class="service-desc">Developed and delivered advanced machine learning and programming curricula for major enterprise partners and research institutes:</p>
+                        <div class="company-logos">
+                            <span class="company-pill"><i class="fas fa-building"></i> Samsung Electronics</span>
+                            <span class="company-pill"><i class="fas fa-bolt"></i> LG Energy Solution</span>
+                            <span class="company-pill"><i class="fas fa-tv"></i> LG Electronics</span>
+                            <span class="company-pill"><i class="fas fa-microchip"></i> SK Hynix</span>
+                            <span class="company-pill"><i class="fas fa-industry"></i> Hyundai Steel</span>
+                        </div>
+                    </div>
+
+                    <!-- TA & Academic Service -->
+                    <div class="service-card">
+                        <div class="card-title-icon">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3>Academic Service & Teaching Assistance</h3>
                         </div>
                         
-                        <div class="education-summary">
-                            <h3>Education</h3>
-                            <div class="education-item">
-                                <strong>M.S. in Industrial and Management Engineering</strong><br>
-                                Korea University, South Korea (March 2021 - Feb 2023)<br>
-                                <em>Advisor: Jungeol Baek</em>
-                            </div>
-                            <div class="education-item">
-                                <strong>B.S. in Statistics & Computer Science</strong><br>
-                                Sookmyung Women's University, South Korea (March 2017 - Feb 2021)<br>
-                                <em>Advisor: Young-geun Choi</em>
-                            </div>
+                        <div class="service-subgroup">
+                            <h4><i class="fas fa-university"></i> Teaching Assistant – Korea University</h4>
+                            <ul class="simple-list">
+                                <li><strong>IDS505: Data Science & AI Programming</strong> (Spring 2022)</li>
+                                <li><strong>IDS508: Principles and Applications of Machine Learning</strong> (Fall 2022)</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-subgroup">
+                            <h4><i class="fas fa-check-double"></i> Academic Reviewer Service</h4>
+                            <ul class="simple-list">
+                                <li><strong>Journal Reviewer:</strong> <em>Journal of Imaging Science and Technology</em> (2023)</li>
+                                <li><strong>Book Reviewer:</strong> <em>Insights from Kaggle Medalists</em> (2023)</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="contact-links">
-                        <a href="https://github.com/techzzt" class="contact-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="#" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Honors Section -->
+        <section id="awards" class="awards section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Awards & Honors</h2>
+                    <p class="section-subtitle">National AI & Big Data competition honors and academic distinctions</p>
+                </div>
+
+                <div class="awards-grid">
+                    <div class="award-card highlight-award">
+                        <div class="award-trophy"><i class="fas fa-trophy"></i></div>
+                        <div class="award-details">
+                            <span class="award-rank grand">Grand Prize (대상)</span>
+                            <h3>Data-based Service Contest for Workplace Safety AI</h3>
+                            <p class="award-year">2021</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-trophy"><i class="fas fa-award"></i></div>
+                        <div class="award-details">
+                            <span class="award-rank special">Special Prize (특별상)</span>
+                            <h3>Weather Big Data Contest</h3>
+                            <p class="award-year">2022</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-trophy"><i class="fas fa-medal"></i></div>
+                        <div class="award-details">
+                            <span class="award-rank third">Third Prize (우수상)</span>
+                            <h3>Contest for Natural and Artificially Generated Data</h3>
+                            <p class="award-year">2021</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-trophy"><i class="fas fa-certificate"></i></div>
+                        <div class="award-details">
+                            <span class="award-rank paper">Best Paper Award</span>
+                            <h3>Korean Institute of Information Scientists and Engineers (KIISE)</h3>
+                            <p class="award-year">2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Programming languages, scientific tools, and neural simulation frameworks</p>
+                </div>
+
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                        <div class="tech-pills">
+                            <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-tag highlight"><i class="fas fa-fire"></i> PyTorch</span>
+                            <span class="tech-tag highlight"><i class="fas fa-cogs"></i> TensorFlow</span>
+                            <span class="tech-tag highlight"><i class="fas fa-brain"></i> Brian2 (SNN Simulator)</span>
+                            <span class="tech-tag"><i class="fas fa-chart-bar"></i> R</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
+                        <div class="tech-pills">
+                            <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="tech-tag"><i class="fas fa-square-root-alt"></i> LaTeX</span>
+                            <span class="tech-tag"><i class="fas fa-chart-pie"></i> Tableau</span>
+                            <span class="tech-tag"><i class="fas fa-project-diagram"></i> Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">Feel free to connect for research inquiries or academic opportunities</p>
+                </div>
+
+                <div class="contact-box">
+                    <div class="contact-info-card">
+                        <div class="contact-method" id="copy-email-btn">
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="method-label">Email Address (Click to copy)</span>
+                                <span class="method-value contact-email">jieunkim.cs@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="method-label">Current Affiliation</span>
+                                <span class="method-value">Brain Science Institute, KIST<br>Seoul, South Korea</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-links-grid">
+                            <a href="https://techzzt.github.io/jieunkim" class="social-btn" target="_blank" rel="noopener">
+                                <i class="fas fa-globe"></i> Website
+                            </a>
+                            <a href="https://github.com/techzzt" class="social-btn" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="CV_JieunKim.pdf" class="social-btn" target="_blank" rel="noopener">
+                                <i class="fas fa-file-pdf"></i> Download CV
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,11 +545,11 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Jieun Kim. All rights reserved.</p>
-            <p>Researcher in Computational Networks & Brain-Inspired AI</p>
+            <p>&copy; 2026 Jieun Kim. All rights reserved.</p>
+            <p class="footer-sub">Research Intern @ KIST Brain Science Institute</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

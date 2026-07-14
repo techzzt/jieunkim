@@ -2,38 +2,51 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            // Close mobile menu if open
+            const navMenu = document.querySelector('.nav-menu');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Navbar background on scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileBtn && navMenu) {
+        mobileBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
     }
 });
 
-// Active navigation link highlighting
+// Active navigation link highlighting on scroll
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
+    const scrollPosition = window.scrollY + 120;
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 200)) {
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
@@ -46,85 +59,64 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Add fade-in animation on scroll
+// Scroll Reveal Animations
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('revealed');
+            revealObserver.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.publication, .highlight-card, .contact-link');
+    const animatedElements = document.querySelectorAll(
+        '.timeline-card, .pub-card, .pres-card, .service-card, .award-card, .skill-category'
+    );
     
-    animateElements.forEach(el => {
+    animatedElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        revealObserver.observe(el);
     });
 });
 
-// Copy email to clipboard
+// Helper for revealed elements
+const style = document.createElement('style');
+style.textContent = `
+    .revealed {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(style);
+
+// Email Click-to-Copy functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const emailElement = document.querySelector('.contact-email');
-    if (emailElement) {
-        emailElement.style.cursor = 'pointer';
-        emailElement.title = 'Click to copy email';
-        
-        emailElement.addEventListener('click', function() {
-            const email = this.textContent.replace(' [at] ', '@').replace(' [dot] ', '.');
-            navigator.clipboard.writeText(email).then(function() {
-                // Show temporary feedback
-                const originalText = emailElement.textContent;
-                emailElement.textContent = 'Email copied!';
-                emailElement.style.color = '#059669';
+    const emailBtn = document.getElementById('copy-email-btn');
+    if (emailBtn) {
+        emailBtn.addEventListener('click', function() {
+            const emailText = 'jieunkim.cs@gmail.com';
+            navigator.clipboard.writeText(emailText).then(function() {
+                const valueElem = emailBtn.querySelector('.method-value');
+                const originalText = valueElem.textContent;
+                
+                valueElem.textContent = 'Copied to Clipboard! ✓';
+                valueElem.style.color = '#10b981';
                 
                 setTimeout(() => {
-                    emailElement.textContent = originalText;
-                    emailElement.style.color = '';
-                }, 2000);
+                    valueElem.textContent = originalText;
+                    valueElem.style.color = '';
+                }, 2200);
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
             });
         });
     }
 });
-
-// Mobile menu toggle (if needed in future)
-function toggleMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('active');
-}
-
-// Typing animation for the hero title (optional enhancement)
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Initialize typing animation when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    const heroTitle = document.querySelector('.hero-text h1');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        // Uncomment the line below to enable typing animation
-        // typeWriter(heroTitle, originalText, 80);
-    }
-}); 
