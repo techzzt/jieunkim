@@ -192,7 +192,30 @@ body {
     color: var(--text-muted);
     margin-bottom: 1.25rem;
     line-height: 1.75;
-    text-align: justify;
+}
+
+.role-sep {
+    margin: 0 0.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.detail-block p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.experience-bullets {
+    list-style-type: disc;
+    padding-left: 1.1rem;
+    color: var(--text-muted);
+}
+
+.experience-bullets li {
+    font-size: 0.875rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.55;
 }
 
 /* Interest Badges */
@@ -605,7 +628,6 @@ body {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
     line-height: 1.6;
-    text-align: justify;
 }
 
 .pub-desc {
@@ -613,7 +635,6 @@ body {
     color: var(--text-light);
     margin-top: 0.5rem;
     line-height: 1.55;
-    text-align: justify;
 }
 
 .project-gallery-grid {
@@ -822,7 +843,6 @@ body {
     color: var(--text-muted);
     margin: 0.65rem 0 0.85rem 0;
     line-height: 1.6;
-    text-align: justify;
 }
 
 .company-logos {
