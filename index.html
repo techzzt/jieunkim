@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jieun Kim - Research Intern at KIST focusing on Trustworthy ML, Model Reliability & Robustness, Representation Learning, and Brain-Inspired AI.">
+    <meta name="description" content="Jieun Kim - Researcher in Trustworthy ML, Model Reliability & Robustness, Representation Learning, and Brain-Inspired AI.">
     <title>Jieun Kim | Researcher in Brain-Inspired AI & ML</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -14,11 +14,11 @@
         <div class="nav-container">
             <a href="#home" class="nav-logo">
                 <span class="logo-name">Jieun Kim</span>
-                <span class="logo-title">KIST Research Intern</span>
             </a>
             <div class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#research" class="nav-link">Research</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#publications" class="nav-link">Publications</a>
                 <a href="#presentations" class="nav-link">Presentations</a>
                 <a href="#teaching" class="nav-link">Teaching & Service</a>
@@ -37,19 +37,16 @@
         <section id="home" class="hero">
             <div class="container hero-container">
                 <div class="hero-text">
-                    <div class="badge-status">
-                        <span class="pulse-dot"></span> Research Intern @ KIST Brain Science Institute
-                    </div>
                     <h1>Jieun Kim</h1>
                     <p class="hero-subtitle">
                         Investigating <strong>Trustworthy Machine Learning</strong>, <strong>Model Reliability & Robustness</strong>, <strong>Representation Learning</strong>, and <strong>Brain-Inspired AI</strong>
                     </p>
                     
                     <p class="intro-text">
-                        I am a Research Intern at the <strong>Korea Institute of Science and Technology (KIST)</strong> under the supervision of <strong>Dr. Taegon Kim</strong>. My computational research focuses on constructing large-scale spiking neuron network (SNN) architectures and understanding circuit dynamics in cortico-basal ganglia loops. By computationally modeling neural synchronization and motor/non-motor symptom comorbidity in Parkinson's disease, I aim to develop robust brain-inspired AI frameworks and adaptive deep brain stimulation (DBS) strategies.
+                        I am a Machine Learning Researcher focusing on <strong>Trustworthy and Brain-Inspired AI</strong>, spanning <strong>explainable time-series anomaly detection</strong>, <strong>continuous-time neural representation</strong>, and <strong>robust computational dynamics</strong>. My research background includes modeling Spiking Neural Networks (SNNs) at the <strong>Korea Institute of Science and Technology (KIST)</strong> advised by Dr. Taegon Kim, developing unsupervised Neural ODE frameworks for irregular telemetry at the <strong>Georgia Institute of Technology (Atlanta, GA, USA)</strong>, and engineering distribution-guided Transformers for missing value imputation during my Master's at <strong>Korea University</strong>. Across these domains, my goal is to build reliable, explainable, and physics-guided AI systems for real-world decision making.
                     </p>
                     <p class="intro-text">
-                        I received my <strong>M.S. in Industrial and Management Engineering</strong> from <strong>Korea University</strong> (Advisor: Prof. Jun-Geol Baek), where I engineered multivariate time-series representation architectures and transformer-based missing value imputation models. I hold a <strong>B.S. in Statistics & Computer Science</strong> from <strong>Sookmyung Women's University</strong> (Advisor: Prof. Young-Geun Choi).
+                        I received my <strong>M.S. in Industrial and Management Engineering</strong> from <strong>Korea University</strong> advised by Prof. Jun-Geol Baek, and hold a <strong>B.S. in Statistics & Computer Science</strong> from <strong>Sookmyung Women's University</strong> advised by Prof. Young-Geun Choi.
                     </p>
 
                     <!-- Research Interest Badges -->
@@ -103,7 +100,7 @@
                                     <p>Investigating topographic cortico-basal ganglia computational circuits to computationally model the emergence of both motor and non-motor symptom comorbidities in Parkinson’s disease (PD). The overarching goal is to understand how altered spiking dynamics and network-level synchronization degrade signal processing in neural systems.</p>
                                 </div>
                                 <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <h4><i class="fas fa-cogs"></i> Technical & Methodology</h4>
                                     <ul class="experience-bullets">
                                         <li>Constructed large-scale Spiking Neural Networks (SNNs) incorporating realistic anatomical connectivity, topographic input projections, and synaptic plasticity parameters.</li>
                                         <li>Quantitative simulation of population spiking activity and phase-locking neural synchronization across baseline vs. dopamine-depleted pathological states.</li>
@@ -120,26 +117,29 @@
                                 <span class="mini-tag">Brian2 Simulator</span>
                             </div>
 
-                            <!-- Figure Slot Container -->
-                            <div class="figure-slot-wrapper">
-                                <div class="figure-slot-header">
-                                    <i class="fas fa-image"></i>
-                                    <span>Research Visualization / Figure Container</span>
-                                </div>
-                                <div class="figure-slot-placeholder">
-                                    <p><i class="fas fa-project-diagram"></i> Diagram / Circuit Architecture Figure for Basal Ganglia SNN Model will be presented here.</p>
+                            <!-- KIST Featured Visual Gallery -->
+                            <div class="project-gallery-grid" style="margin-top: 15px;">
+                                <div class="gallery-card full-width-card">
+                                    <div class="gallery-header">
+                                        <i class="fas fa-brain"></i>
+                                        <span>Topographic Cortico-Basal Ganglia Circuit & Parkinson's Disease Neural Dynamics Model</span>
+                                    </div>
+                                    <div class="gallery-img-box">
+                                        <img src="images/kist_featured_model_dynamics.png" alt="Topographic Cortico-Basal Ganglia Circuit & PD Neural Dynamics Model" class="project-img">
+                                    </div>
+                                    <p class="gallery-caption">그림 0. Topographic cortico-basal ganglia-thalamus-cortex (CBTC) SNN 회로 모델 구조 및 파킨슨병(PD) 도파민 고갈 상태에서의 모듈별(Motor, Associative, Limbic) 신경 발화 동역학 및 Beta 동기화 분석 결과</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Georgia Tech -->
-                    <div class="timeline-card">
+                    <div class="timeline-card highlight-border">
                         <div class="card-header">
                             <div class="org-info">
                                 <span class="org-icon"><i class="fas fa-university"></i></span>
                                 <div>
-                                    <h3>Georgia Institute of Technology (Georgia Tech, USA)</h3>
+                                    <h3>Georgia Institute of Technology (Atlanta, GA, USA)</h3>
                                     <p class="role">Visiting Researcher | Advisor: Prof. Jungho Lewe</p>
                                 </div>
                             </div>
@@ -148,32 +148,52 @@
                         <div class="card-body">
                             <div class="research-detail-grid">
                                 <div class="detail-block">
-                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
-                                    <p>Engineered deep generative models capable of detecting complex anomaly spikes and temporal irregular patterns in high-frequency multidimensional building sensor time-series data.</p>
+                                    <h4><i class="fas fa-bullseye"></i> Unsupervised Neural ODE Modeling</h4>
+                                    <p><strong>라벨이 없는(Unlabeled) 비연속 센서 데이터</strong> 환경에서 인위적 임퓨테이션 전처리 없이 <strong>Neural ODEs(연속시간 미분방정식)</strong>를 도입하여 원인 오차 및 Point Anomaly 스파이크를 원본 그대로 자율 감지하는 시스템 구축.</p>
                                 </div>
                                 <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <h4><i class="fas fa-cogs"></i> Technical & Derived Feature Engineering</h4>
                                     <ul class="experience-bullets">
-                                        <li>Developed temporal Generative Adversarial Network (GAN) architectures paired with continuous-time differential modeling (Neural ODEs) to handle irregularly sampled multivariate sensor series.</li>
-                                        <li>Evaluated anomaly scoring metrics across continuous time horizons, achieving enhanced sensitivity to sudden transient spikes and long-term system drift.</li>
+                                        <li><strong>물리적 파생 변수 수식화 (Physical Feature Derived Equations):</strong>
+                                            <br>• Supply/Return 온도차: $\Delta T_t = T_{\text{return}, t} - T_{\text{supply}, t}$
+                                            <br>• 유량 대비 열 전달비: $\text{Heat Flow Ratio}_t = \frac{\Delta T_t}{\text{Flow}_t} = \frac{T_{\text{return}, t} - T_{\text{supply}, t}}{\text{Flow}_t}$
+                                        </li>
+                                        <li><strong>Neural ODEs & SRE Scoring:</strong> 비연속 시계열 데이터를 억지로 보정 전처리하지 않고 연속시간 궤적으로 딥러닝 미분 모델링하여 원본 데이터 보존. SRE Scoring 기반 자율 이상 감지.</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="project-tech-tags">
-                                <span class="mini-tag">Deep GANs</span>
                                 <span class="mini-tag">Neural ODEs</span>
-                                <span class="mini-tag">Multidimensional Anomaly Spikes</span>
-                                <span class="mini-tag">Time-Series Sensing</span>
+                                <span class="mini-tag">Continuous-Time Dynamics</span>
+                                <span class="mini-tag">Unsupervised Learning</span>
+                                <span class="mini-tag">Unlabeled Irregular Series</span>
+                                <span class="mini-tag">Performer Enc-Dec</span>
+                                <span class="mini-tag">SRE Anomaly Scoring</span>
                             </div>
 
-                            <div class="figure-slot-wrapper">
-                                <div class="figure-slot-header">
-                                    <i class="fas fa-image"></i>
-                                    <span>Research Visualization / Figure Container</span>
+                            <!-- Georgia Tech Visual Sub-gallery -->
+                            <div class="project-gallery-grid" style="margin-top: 15px;">
+                                <div class="gallery-card">
+                                    <div class="gallery-header">
+                                        <i class="fas fa-table"></i>
+                                        <span>GT Smart Building Unlabeled Derived Feature Data Schema</span>
+                                    </div>
+                                    <div class="gallery-img-box">
+                                        <img src="images/gt_building_excel_data.png" alt="GT Smart Building Derived Feature Data View" class="project-img">
+                                    </div>
+                                    <p class="gallery-caption">그림 3-1. 건물별 Supply/Return 온도차($\Delta T$) 및 유량 대비 열 전달비($\Delta T / \text{Flow}$) 파생 변수 표 예시 (Unlabeled Data)</p>
                                 </div>
-                                <div class="figure-slot-placeholder">
-                                    <p><i class="fas fa-chart-line"></i> Temporal Anomaly Spike Detection & GAN Architecture Figure Container</p>
+
+                                <div class="gallery-card">
+                                    <div class="gallery-header">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Performer SRE Anomaly Scoring (Unsupervised Detection)</span>
+                                    </div>
+                                    <div class="gallery-img-box">
+                                        <img src="images/gt_sre_anomaly_score.png" alt="Georgia Tech SRE Scoring Anomaly Detection" class="project-img">
+                                    </div>
+                                    <p class="gallery-caption">그림 3-2. Neural ODEs & Performer SRE Reconstruction Scoring 기반 Point Anomaly Spike 탐지 결과 (Unsupervised Data)</p>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +218,7 @@
                                     <p>Advanced multivariate time-series representation enhancement, missing value imputation, and predictive Remaining Useful Life (RUL) modeling for industrial telemetry and complex system operational logs.</p>
                                 </div>
                                 <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <h4><i class="fas fa-cogs"></i> Technical & Methodology</h4>
                                     <ul class="experience-bullets">
                                         <li>Designed a multiple encoder framework tailored for multivariate anomaly detection under varying normality conditions.</li>
                                         <li>Developed a novel distribution-based Transformer framework for probabilistic time-series missing value imputation (Master's Thesis).</li>
@@ -233,10 +253,10 @@
                             <div class="research-detail-grid">
                                 <div class="detail-block">
                                     <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
-                                    <p>Classifying heterogeneous breast cancer molecular subtypes by integrating high-throughput multi-omics gene expression datasets.</p>
+                                    <p>Integrated high-throughput multi-omics gene expression profiles to classify heterogeneous molecular subtypes of breast cancer.</p>
                                 </div>
                                 <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <h4><i class="fas fa-cogs"></i> Technical & Methodology</h4>
                                     <ul class="experience-bullets">
                                         <li>Engineered Multi-Layer Perceptron (MLP) neural network architectures incorporating gene expression profile normalization and dimensionality reduction.</li>
                                         <li>Evaluated classification robustness across genomic and transcriptomic integration, publishing results in the Journal of KIISE (2020).</li>
@@ -272,7 +292,7 @@
                                     <p>Parametric survival modeling and risk factor volatility analysis using large-scale epidemiological COVID-19 patient records.</p>
                                 </div>
                                 <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Modeling Methodology</h4>
+                                    <h4><i class="fas fa-cogs"></i> Technical & Methodology</h4>
                                     <ul class="experience-bullets">
                                         <li>Estimated incubation period distributions and case fatality rates using parametric probability distribution functions.</li>
                                         <li>Published statistical findings in The Korean Journal of Applied Statistics (2020).</li>
@@ -291,8 +311,140 @@
             </div>
         </section>
 
+        <!-- Detailed Key Projects Section (Hyundai & BisTelligence Dedicated Cards) -->
+        <section id="projects" class="projects section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Industrial Research Projects</h2>
+                    <p class="section-subtitle">Multiple Time-series Anomaly Detection & Predictive Maintenance Systems</p>
+                </div>
+
+                <div class="project-pages-wrapper">
+                    <!-- Project 1: Hyundai FCEV Anomaly Detection -->
+                    <div class="project-page-card">
+                        <div class="project-header-bar hyundai">
+                            <div class="project-title-area">
+                                <span class="proj-badge">Project Page 01</span>
+                                <h3>Hyundai Motors: Multiple Time-series Anomaly Detection</h3>
+                                <p class="proj-subtext"><i class="fas fa-car-side"></i> Hydrogen Fuel Cell Vehicle (FCEV) Pre-failure Anomaly Detection (2021.07 – 2022.06)</p>
+                            </div>
+                            <span class="proj-date-pill">2021.07 ~ 2022.06</span>
+                        </div>
+
+                        <div class="project-content-body">
+                            <div class="project-summary-box">
+                                <h4><i class="fas fa-bullseye"></i> 프로젝트 개요</h4>
+                                <ul class="proj-bullets">
+                                    <li><strong>목표:</strong> 수소차 주행 중 실시간 센서 기반 이상 사전 감지 모델 개발</li>
+                                    <li><strong>데이터 단위:</strong> 주행 시작~종료 1회 주행을 사이클(`Driving_Cycle_ID`) 단위 수집 (386,842 관측치)</li>
+                                    <li><strong>모델링:</strong> 정상 데이터 중심 One-Class Autoencoder 및 SHAP 기반 원인 인자 기여도 파악</li>
+                                </ul>
+                            </div>
+
+                            <!-- Figures Grid for Hyundai -->
+                            <div class="project-gallery-grid">
+                                <div class="gallery-card">
+                                    <div class="gallery-header">
+                                        <i class="fas fa-table"></i>
+                                        <span>FCEV Telemetry Data Schema (Excel View)</span>
+                                    </div>
+                                    <div class="gallery-img-box">
+                                        <img src="images/hyundai_excel_data.png" alt="Hyundai Telemetry Excel Data Sample" class="project-img">
+                                    </div>
+                                    <p class="gallery-caption">그림 1-1. Timestamp, 주행 사이클 ID(`Driving_Cycle_ID`), Vehicle_ID 및 센서 변수($X_1 \sim X_4$) 데이터 구조 예시</p>
+                                </div>
+
+                                <div class="gallery-card">
+                                    <div class="gallery-header">
+                                        <i class="fas fa-chart-area"></i>
+                                        <span>Driving Cycle Loss Profile & SHAP Feature Importance</span>
+                                    </div>
+                                    <div class="gallery-img-box">
+                                        <img src="images/hyundai_reconstruction_error.png" alt="Hyundai Autoencoder Reconstruction Error and SHAP" class="project-img">
+                                    </div>
+                                    <p class="gallery-caption">그림 1-2. 주행 1회 사이클 내에서의 정상 vs 이상 구간 재구성 오차 궤적 및 SHAP 변수($X_1 \sim X_5$) 기여도</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: BisTelligence Pump RUL & Health Index -->
+                    <div class="project-page-card">
+                        <div class="project-header-bar bistelligence">
+                            <div class="project-title-area">
+                                <span class="proj-badge bistel">Project Page 02</span>
+                                <h3>BisTelligence: Industrial Pump RUL & Health Index System</h3>
+                                <p class="proj-subtext"><i class="fas fa-industry"></i> Industrial Pump Remaining Useful Life (RUL) & Monitoring (2022.06 – 2023.01)</p>
+                            </div>
+                            <span class="proj-date-pill">2022.06 ~ 2023.01</span>
+                        </div>
+
+                        <div class="project-content-body">
+                            <div class="project-summary-box">
+                                <h4><i class="fas fa-bullseye"></i> 프로젝트 개요</h4>
+                                <ul class="proj-bullets">
+                                    <li><strong>목표:</strong> 펌프 센서 데이터 기반 잔여 수명(RUL) 예측 및 예지보전 시스템 구축</li>
+                                    <li><strong>데이터 특성:</strong> 장비별 고장 시점에 따른 가변 시계열 길이 (Variable Sequence Lengths)</li>
+                                    <li><strong>모델링:</strong> 초기 30% 정상 데이터(Baseline) 기반 LSTM-Autoencoder 지표 산출</li>
+                                </ul>
+                            </div>
+
+                            <!-- BisTelligence Excel Data View Card (Variable Sequence Lengths) -->
+                            <div class="gallery-card full-width-card" style="margin-bottom: 20px;">
+                                <div class="gallery-header">
+                                    <i class="fas fa-table"></i>
+                                    <span>BisTelligence Industrial Pump Telemetry Schema (Excel View - Variable Sequence Lengths)</span>
+                                </div>
+                                <div class="gallery-img-box">
+                                    <img src="images/bistelligence_excel_data.png" alt="BisTelligence Telemetry Excel Data Sample" class="project-img">
+                                </div>
+                                <p class="gallery-caption">그림 2-1. 펌프별 서로 다른 고장 수집 데이터 길이(`Pump_01`: 1,100 / `Pump_02`: 1,500 / `Pump_03`: 1,850 steps) 및 센서 상태 표 예시</p>
+                            </div>
+
+                            <!-- BisTelligence Model Architecture & Workflow Diagram -->
+                            <div class="gallery-card full-width-card" style="margin-bottom: 20px;">
+                                <div class="gallery-header">
+                                    <i class="fas fa-sitemap"></i>
+                                    <span>BisTelligence LSTM-AE Model Architecture & Health Index Workflow Pipeline</span>
+                                </div>
+                                <div class="gallery-img-box">
+                                    <img src="images/bistelligence_model_pipeline.png" alt="BisTelligence Model Pipeline Diagram" class="project-img">
+                                </div>
+                                <p class="gallery-caption">그림 2-2. LSTM-Autoencoder 모델 기반 Health Index 계산 및 Normal → Warning → Alarm Alert 단계별 예지보전 시나리오 워크플로우</p>
+                            </div>
+
+                            <!-- Figures Grid for BisTelligence -->
+                            <div class="project-gallery-grid">
+                                <div class="gallery-card">
+                                    <div class="gallery-header">
+                                        <i class="fas fa-line-chart"></i>
+                                        <span>End-of-Life (EOL) Health Index Curve</span>
+                                    </div>
+                                    <div class="gallery-img-box">
+                                        <img src="images/bistelligence_health_index.png" alt="BisTelligence Health Index EOL Curve" class="project-img">
+                                    </div>
+                                    <p class="gallery-caption">그림 2-3. 초기 30% 정상 학습 데이터 기준 및 시간 흐름에 따른 Health Index(재구성 오차) 상승 곡선과 Warning/Alarm 구간</p>
+                                </div>
+
+                                <div class="gallery-card">
+                                    <div class="gallery-header">
+                                        <i class="fas fa-project-diagram"></i>
+                                        <span>Full 6x6 Correlation Matrix & Variable Sequence Lengths</span>
+                                    </div>
+                                    <div class="gallery-img-box">
+                                        <img src="images/bistelligence_sensor_correlation.png" alt="BisTelligence Full Correlation Matrix and Variable Sequence Lengths" class="project-img">
+                                    </div>
+                                    <p class="gallery-caption">그림 2-4. 6x6 전체 센서 상관계수 수치 Matrix 및 펌프별 서로 다른 고장 수집 데이터 길이(Variable Sequence Lengths) 비교</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Publications Section -->
-        <section id="publications" class="publications section-padding bg-alt">
+        <section id="publications" class="publications section-padding">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Publications</h2>
@@ -331,7 +483,7 @@
         </section>
 
         <!-- Presentations Section -->
-        <section id="presentations" class="presentations section-padding">
+        <section id="presentations" class="presentations section-padding bg-alt">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Presentations</h2>
@@ -367,11 +519,11 @@
         </section>
 
         <!-- Teaching & Professional Service Section -->
-        <section id="teaching" class="teaching section-padding bg-alt">
+        <section id="teaching" class="teaching section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Teaching & Professional Service</h2>
-                    <p class="section-subtitle">Corporate AI curriculum delivery, university teaching, and academic reviewing</p>
+                    <h2 class="section-title" id="teaching-title-heading">Teaching & Academic Service</h2>
+                    <p class="section-subtitle">Corporate instruction, university teaching assistance, and peer review services</p>
                 </div>
 
                 <div class="grid-2col">
@@ -379,12 +531,12 @@
                     <div class="service-card">
                         <div class="card-title-icon">
                             <i class="fas fa-chalkboard-teacher"></i>
-                            <h3>Corporate Instructor & Programming Assistant</h3>
+                            <h3>Corporate Technical Instructor & Teaching Assistant</h3>
                         </div>
-                        <span class="date-badge">Spring 2022 – Dec 2023</span>
-                        <p class="service-desc">Developed and delivered advanced machine learning and programming curricula for major enterprise partners and research institutes:</p>
+                        <span class="date-badge">May 2024 – Present</span>
+                        <p class="service-desc">Delivering advanced machine learning, AI programming, and data engineering instruction for enterprise industry partners, primarily conducting technical training for <strong>Samsung Electronics</strong> (and corporate programs for LGES, SK Hynix, Hyundai Steel):</p>
                         <div class="company-logos">
-                            <span class="company-pill"><i class="fas fa-building"></i> Samsung Electronics</span>
+                            <span class="company-pill"><i class="fas fa-building"></i> Samsung Electronics (Primary)</span>
                             <span class="company-pill"><i class="fas fa-bolt"></i> LG Energy Solution</span>
                             <span class="company-pill"><i class="fas fa-tv"></i> LG Electronics</span>
                             <span class="company-pill"><i class="fas fa-microchip"></i> SK Hynix</span>
@@ -420,7 +572,7 @@
         </section>
 
         <!-- Awards & Honors Section -->
-        <section id="awards" class="awards section-padding">
+        <section id="awards" class="awards section-padding bg-alt">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Awards & Honors</h2>
@@ -431,8 +583,8 @@
                     <div class="award-card highlight-award">
                         <div class="award-trophy"><i class="fas fa-trophy"></i></div>
                         <div class="award-details">
-                            <span class="award-rank grand">Grand Prize (대상)</span>
-                            <h3>Data-based Service Contest for Workplace Safety AI</h3>
+                            <span class="award-rank grand">Grand Prize</span>
+                            <h3>Data-driven Workplace Safety AI Contest</h3>
                             <p class="award-year">2021</p>
                         </div>
                     </div>
@@ -440,8 +592,8 @@
                     <div class="award-card">
                         <div class="award-trophy"><i class="fas fa-award"></i></div>
                         <div class="award-details">
-                            <span class="award-rank special">Special Prize (특별상)</span>
-                            <h3>Weather Big Data Contest</h3>
+                            <span class="award-rank special">Special Prize</span>
+                            <h3>National Weather Big Data Contest</h3>
                             <p class="award-year">2022</p>
                         </div>
                     </div>
@@ -449,8 +601,8 @@
                     <div class="award-card">
                         <div class="award-trophy"><i class="fas fa-medal"></i></div>
                         <div class="award-details">
-                            <span class="award-rank third">Third Prize (우수상)</span>
-                            <h3>Contest for Natural and Artificially Generated Data</h3>
+                            <span class="award-rank third">Excellence Award</span>
+                            <h3>Acoustic Data AI Service Innovation Competition</h3>
                             <p class="award-year">2021</p>
                         </div>
                     </div>
@@ -468,7 +620,7 @@
         </section>
 
         <!-- Technical Skills Section -->
-        <section id="skills" class="skills section-padding bg-alt">
+        <section id="skills" class="skills section-padding">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Technical Skills</h2>
@@ -501,7 +653,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact section-padding">
+        <section id="contact" class="contact section-padding bg-alt">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Contact</h2>
@@ -546,7 +698,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Jieun Kim. All rights reserved.</p>
-            <p class="footer-sub">Research Intern @ KIST Brain Science Institute</p>
+            <p class="footer-sub">Researcher in Brain-Inspired AI & Trustworthy Machine Learning</p>
         </div>
     </footer>
 

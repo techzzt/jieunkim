@@ -76,7 +76,7 @@ const revealObserver = new IntersectionObserver(function(entries) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll(
-        '.timeline-card, .pub-card, .pres-card, .service-card, .award-card, .skill-category'
+        '.timeline-card, .project-page-card, .pub-card, .pres-card, .service-card, .award-card, .skill-category'
     );
     
     animatedElements.forEach(el => {
