@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -17,12 +26,9 @@
             </a>
             <div class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#research" class="nav-link">Research</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#presentations" class="nav-link">Presentations</a>
-                <a href="#teaching" class="nav-link">Teaching & Service</a>
-                <a href="#awards" class="nav-link">Awards</a>
+                <a href="#research" class="nav-link">Research & Publications</a>
+                <a href="#projects" class="nav-link">Industrial Projects</a>
+                <a href="#experience" class="nav-link">Experience & Awards</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -72,12 +78,12 @@
             </div>
         </section>
 
-        <!-- Research Experience Section -->
+        <!-- Research Experience, Publications & Presentations Section -->
         <section id="research" class="research section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Research Experience</h2>
-                    <p class="section-subtitle">Deep dive into brain-inspired computational modeling, generative time-series anomaly detection, and statistical inference</p>
+                    <h2 class="section-title">Research & Publications</h2>
+                    <p class="section-subtitle">Deep dive into brain-inspired computational modeling, continuous-time Neural ODEs, and Transformer imputation</p>
                 </div>
 
                 <div class="timeline">
@@ -117,7 +123,7 @@
                                 <span class="mini-tag">Brian2 Simulator</span>
                             </div>
 
-                            <!-- KIST Crisp Circuit Figure & Full Poster Link -->
+                            <!-- KIST Circuit Figure & Full Poster Download Link -->
                             <div class="project-gallery-grid" style="margin-top: 15px;">
                                 <div class="gallery-card full-width-card" style="border: none; background: transparent;">
                                     <div class="gallery-img-box" style="padding: 0;">
@@ -149,16 +155,16 @@
                             <div class="research-detail-grid">
                                 <div class="detail-block">
                                     <h4><i class="fas fa-bullseye"></i> Unsupervised Neural ODE Modeling</h4>
-                                    <p><strong>라벨이 없는(Unlabeled) 비연속 센서 데이터</strong> 환경에서 인위적 임퓨테이션 전처리 없이 <strong>Neural ODEs(연속시간 미분방정식)</strong>를 도입하여 원인 오차 및 Point Anomaly 스파이크를 원본 그대로 자율 감지하는 시스템 구축.</p>
+                                    <p>Constructed an unsupervised anomaly detection framework for <strong>unlabeled non-continuous sensor telemetry</strong> without artificial imputation, deploying <strong>Neural ODEs (continuous-time differential equations)</strong> to preserve 100% raw data dynamics while detecting point anomaly spikes.</p>
                                 </div>
                                 <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Derived Feature Engineering</h4>
+                                    <h4><i class="fas fa-cogs"></i> Technical & Physical Feature Engineering</h4>
                                     <ul class="experience-bullets">
-                                        <li><strong>물리적 파생 변수 수식화 (Physical Feature Derived Equations):</strong>
-                                            <br>• Supply/Return 온도차: $\Delta T_t = T_{\text{return}, t} - T_{\text{supply}, t}$
-                                            <br>• 유량 대비 열 전달비: $\text{Heat Flow Ratio}_t = \frac{\Delta T_t}{\text{Flow}_t} = \frac{T_{\text{return}, t} - T_{\text{supply}, t}}{\text{Flow}_t}$
+                                        <li><strong>Physical Feature Derived Equations:</strong>
+                                            <br>&bull; Supply/Return Temperature Difference: $\Delta T_t = T_{\text{return}, t} - T_{\text{supply}, t}$
+                                            <br>&bull; Heat Flow Ratio: $\text{Heat Flow Ratio}_t = \frac{\Delta T_t}{\text{Flow}_t} = \frac{T_{\text{return}, t} - T_{\text{supply}, t}}{\text{Flow}_t}$
                                         </li>
-                                        <li><strong>Neural ODEs & SRE Scoring:</strong> 비연속 시계열 데이터를 억지로 보정 전처리하지 않고 연속시간 궤적으로 딥러닝 미분 모델링하여 원본 데이터 보존. SRE Scoring 기반 자율 이상 감지.</li>
+                                        <li><strong>Neural ODEs & SRE Reconstruction Scoring:</strong> Continuous-time differential parameterization to model raw sensor trajectories directly without forced interpolation artifacts. SRE Scoring spike detection (Threshold &gt; 3.8).</li>
                                     </ul>
                                 </div>
                             </div>
@@ -172,11 +178,16 @@
                                 <span class="mini-tag">SRE Anomaly Scoring</span>
                             </div>
 
-                            <!-- Georgia Tech Visual Image -->
+                            <!-- Georgia Tech Model Pipeline Diagram & Result Graph Side-by-Side -->
                             <div class="project-gallery-grid" style="margin-top: 15px;">
-                                <div class="gallery-card full-width-card" style="border: none; background: transparent;">
-                                    <div class="gallery-img-box" style="padding: 0;">
-                                        <img src="images/gt_sre_anomaly_score.png" alt="Georgia Tech SRE Scoring Anomaly Detection Result" class="project-img" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
+                                    <div class="gallery-img-box" style="padding: 0.5rem;">
+                                        <img src="images/gt_model_pipeline.png" alt="Georgia Tech Neural ODE Model Pipeline Diagram" class="project-img" style="border-radius: 6px;">
+                                    </div>
+                                </div>
+                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
+                                    <div class="gallery-img-box" style="padding: 0.5rem;">
+                                        <img src="images/gt_sre_anomaly_score.png" alt="Georgia Tech SRE Reconstruction Anomaly Score Result" class="project-img" style="border-radius: 6px;">
                                     </div>
                                 </div>
                             </div>
@@ -256,39 +267,71 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Sookmyung Women's Univ - COVID-19 -->
-                    <div class="timeline-card">
-                        <div class="card-header">
-                            <div class="org-info">
-                                <span class="org-icon"><i class="fas fa-chart-pie"></i></span>
-                                <div>
-                                    <h3>Sookmyung Women’s University</h3>
-                                    <p class="role">Research Intern | Advisor: Prof. Yangjin Kim</p>
-                                </div>
-                            </div>
-                            <span class="date-badge">Jun 2020 – Jul 2020</span>
+                <!-- Sub-section: Peer-Reviewed Publications -->
+                <div style="margin-top: 3.5rem;">
+                    <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-book-open" style="color: var(--primary);"></i> Publications & Academic Papers
+                    </h3>
+                    <div class="publication-list">
+                        <!-- Thesis -->
+                        <div class="pub-card featured">
+                            <div class="pub-type-tag"><i class="fas fa-graduation-cap"></i> Master's Thesis</div>
+                            <h3 class="pub-title">A distribution-based transformer framework for time series missing value imputation</h3>
+                            <p class="pub-authors"><strong>J. Kim</strong>, Jun-Geol Baek</p>
+                            <p class="pub-venue">Master's Thesis, Korea University, Department of Industrial Management and Engineering, 2023</p>
+                            <p class="pub-desc">Formulated a distribution-guided Transformer architecture designed to probabilistically impute unobserved temporal intervals in complex multivariate industrial time-series datasets.</p>
                         </div>
-                        <div class="card-body">
-                            <div class="research-detail-grid">
-                                <div class="detail-block">
-                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
-                                    <p>Parametric survival modeling and risk factor volatility analysis using large-scale epidemiological COVID-19 patient records.</p>
-                                </div>
-                                <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Methodology</h4>
-                                    <ul class="experience-bullets">
-                                        <li>Estimated incubation period distributions and case fatality rates using parametric probability distribution functions.</li>
-                                        <li>Published statistical findings in The Korean Journal of Applied Statistics (2020).</li>
-                                    </ul>
-                                </div>
-                            </div>
 
-                            <div class="project-tech-tags">
-                                <span class="mini-tag">Parametric Survival Analysis</span>
-                                <span class="mini-tag">Epidemiological Modeling</span>
-                                <span class="mini-tag">R Statistical Analysis</span>
-                            </div>
+                        <!-- COVID-19 Paper -->
+                        <div class="pub-card">
+                            <div class="pub-type-tag"><i class="fas fa-journal-whills"></i> Peer-Reviewed Journal</div>
+                            <h3 class="pub-title">Statistical analysis of estimating incubation period distribution and case fatality rate of COVID-19</h3>
+                            <p class="pub-authors">J. Ki, <strong>J. Kim</strong>, S. Kim, J. Park, J. Lee, and Y.-J. Kim</p>
+                            <p class="pub-venue">The Korean Journal of Applied Statistics, 2020</p>
+                            <p class="pub-desc">Rigorous statistical estimation of incubation parameters and mortality risks leveraging clinical cohort databases during the pandemic.</p>
+                        </div>
+
+                        <!-- Breast Cancer Paper -->
+                        <div class="pub-card">
+                            <div class="pub-type-tag"><i class="fas fa-journal-whills"></i> Peer-Reviewed Journal</div>
+                            <h3 class="pub-title">Breast Cancer Subtype Classification Using Multi-omics Data Integration Based on Neural Network</h3>
+                            <p class="pub-authors">Joungmin Choi, Jiyoung Lee, <strong>Jieun Kim</strong>, Jihyun Kim, Heejoon Chae</p>
+                            <p class="pub-venue">Journal of KIISE, 2020</p>
+                            <p class="pub-desc">Neural network framework integrating high-throughput genomic and transcriptomic features for molecular subtype stratification.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-section: Conference Presentations -->
+                <div style="margin-top: 3rem;">
+                    <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-chalkboard" style="color: var(--primary);"></i> Scientific Presentations & Talks
+                    </h3>
+                    <div class="presentation-grid">
+                        <div class="pres-card">
+                            <div class="pres-badge">SfN 2025</div>
+                            <h3>Topographic Cortico-Basal Ganglia Computational Model Reveals Motor and Non-motor Symptom Comorbidity in Parkinson’s disease</h3>
+                            <p class="pres-conference"><i class="fas fa-calendar-alt"></i> Society for Neuroscience (SfN), 2025</p>
+                        </div>
+
+                        <div class="pres-card">
+                            <div class="pres-badge">KSBNS 2025</div>
+                            <h3>Computational Cortico-Basal Ganglia Model Reveals Altered Spiking Dynamics and Synchronization in Parkinson’s disease</h3>
+                            <p class="pres-conference"><i class="fas fa-calendar-alt"></i> The Korean Society for Brain and Neural Sciences (KSBNS), 2025</p>
+                        </div>
+
+                        <div class="pres-card">
+                            <div class="pres-badge">KSBNS 2024</div>
+                            <h3>Spiking Neural Network Modeling of Basal Ganglia for Parkinson’s disease Prognosis and Adaptive DBS</h3>
+                            <p class="pres-conference"><i class="fas fa-calendar-alt"></i> The Korean Society for Brain and Neural Sciences (KSBNS), 2024</p>
+                        </div>
+
+                        <div class="pres-card">
+                            <div class="pres-badge">KIIE 2022</div>
+                            <h3>Fuel Cell Vehicle Fuel Efficiency Prediction via Data Refinement and Adversarial Generation</h3>
+                            <p class="pres-conference"><i class="fas fa-calendar-alt"></i> Korean Institute of Industrial Engineers, 2022</p>
                         </div>
                     </div>
                 </div>
@@ -309,7 +352,7 @@
                         <div class="project-header-bar hyundai">
                             <div class="project-title-area">
                                 <span class="proj-badge">Project Page 01</span>
-                                <h3>Hyundai Motors: Multiple Time-series Anomaly Detection</h3>
+                                <h3>Hyundai Motor Group: Multiple Time-series Anomaly Detection</h3>
                                 <p class="proj-subtext"><i class="fas fa-car-side"></i> Hydrogen Fuel Cell Vehicle (FCEV) Pre-failure Anomaly Detection (2021.07 – 2022.06)</p>
                             </div>
                             <span class="proj-date-pill">2021.07 ~ 2022.06</span>
@@ -317,36 +360,24 @@
 
                         <div class="project-content-body">
                             <div class="project-summary-box">
-                                <h4><i class="fas fa-bullseye"></i> 프로젝트 개요</h4>
+                                <h4><i class="fas fa-bullseye"></i> Project Overview</h4>
                                 <ul class="proj-bullets">
-                                    <li><strong>목표:</strong> 수소차 주행 중 실시간 센서 기반 이상 사전 감지 모델 개발</li>
-                                    <li><strong>데이터 단위:</strong> 주행 시작~종료 1회 주행을 사이클(`Driving_Cycle_ID`) 단위 수집 (386,842 관측치)</li>
-                                    <li><strong>모델링:</strong> 정상 데이터 중심 One-Class Autoencoder 및 SHAP 기반 원인 인자 기여도 파악</li>
+                                    <li><strong>Goal:</strong> Develop a real-time sensor-based pre-failure anomaly detection model for Hydrogen Fuel Cell Vehicles (FCEVs).</li>
+                                    <li><strong>Data Unit:</strong> 386,842 total observations collected per single driving cycle (`Driving_Cycle_ID`, 99.8% normal vs. 0.2% abnormal).</li>
+                                    <li><strong>Modeling & XAI:</strong> One-Class Autoencoder trained on normal driving dynamics + SHAP feature attribution to isolate root cause sensors ($X_1 \sim X_5$).</li>
                                 </ul>
                             </div>
 
-                            <!-- Figures Grid for Hyundai -->
+                            <!-- Hyundai Schema & Reconstruction Loss Side-by-Side Grid -->
                             <div class="project-gallery-grid">
-                                <div class="gallery-card">
-                                    <div class="gallery-header">
-                                        <i class="fas fa-table"></i>
-                                        <span>FCEV Telemetry Data Schema (Excel View)</span>
+                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
+                                    <div class="gallery-img-box" style="padding: 0.5rem;">
+                                        <img src="images/hyundai_excel_data.png" alt="FCEV Telemetry Data Schema Sample" class="project-img" style="border-radius: 6px;">
                                     </div>
-                                    <div class="gallery-img-box">
-                                        <img src="images/hyundai_excel_data.png" alt="Hyundai Telemetry Excel Data Sample" class="project-img">
-                                    </div>
-                                    <p class="gallery-caption">그림 1-1. Timestamp, 주행 사이클 ID(`Driving_Cycle_ID`), Vehicle_ID 및 센서 변수($X_1 \sim X_4$) 데이터 구조 예시</p>
                                 </div>
-
-                                <div class="gallery-card">
-                                    <div class="gallery-header">
-                                        <i class="fas fa-chart-area"></i>
-                                        <span>Driving Cycle Loss Profile & SHAP Feature Importance</span>
-                            <!-- Hyundai Result Image -->
-                            <div class="project-gallery-grid">
-                                <div class="gallery-card full-width-card" style="border: none; background: transparent;">
-                                    <div class="gallery-img-box" style="padding: 0;">
-                                        <img src="images/hyundai_reconstruction_error.png" alt="Hyundai Autoencoder Reconstruction Error and SHAP Feature Importance" class="project-img" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
+                                    <div class="gallery-img-box" style="padding: 0.5rem;">
+                                        <img src="images/hyundai_reconstruction_error.png" alt="Hyundai Autoencoder Reconstruction Error and SHAP Values" class="project-img" style="border-radius: 6px;">
                                     </div>
                                 </div>
                             </div>
@@ -366,19 +397,24 @@
 
                         <div class="project-content-body">
                             <div class="project-summary-box">
-                                <h4><i class="fas fa-bullseye"></i> 프로젝트 개요</h4>
+                                <h4><i class="fas fa-bullseye"></i> Project Overview</h4>
                                 <ul class="proj-bullets">
-                                    <li><strong>목표:</strong> 펌프 센서 데이터 기반 잔여 수명(RUL) 예측 및 예지보전 시스템 구축</li>
-                                    <li><strong>데이터 특성:</strong> 장비별 고장 시점에 따른 가변 시계열 길이 (Variable Sequence Lengths)</li>
-                                    <li><strong>모델링:</strong> 초기 30% 정상 데이터(Baseline) 기반 LSTM-Autoencoder 지표 산출</li>
+                                    <li><strong>Goal:</strong> Construct a sensor-driven Remaining Useful Life (RUL) prediction and predictive maintenance system for industrial pumps.</li>
+                                    <li><strong>Data Feature:</strong> Variable sequence lengths per pump (1,100 to 1,850 steps) due to varying load operating lifetimes.</li>
+                                    <li><strong>Modeling:</strong> LSTM-Autoencoder metric calculating Health Index (HI) trained on initial 30% normal baseline.</li>
                                 </ul>
                             </div>
 
-                            <!-- BisTelligence Result Image -->
+                            <!-- BisTelligence Model Pipeline & Health Index Side-by-Side Grid -->
                             <div class="project-gallery-grid">
-                                <div class="gallery-card full-width-card" style="border: none; background: transparent;">
-                                    <div class="gallery-img-box" style="padding: 0;">
-                                        <img src="images/bistelligence_health_index.png" alt="BisTelligence Health Index Curve Result" class="project-img" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
+                                    <div class="gallery-img-box" style="padding: 0.5rem;">
+                                        <img src="images/bistelligence_model_pipeline.png" alt="BisTelligence Model Pipeline & Alert Workflow Diagram" class="project-img" style="border-radius: 6px;">
+                                    </div>
+                                </div>
+                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
+                                    <div class="gallery-img-box" style="padding: 0.5rem;">
+                                        <img src="images/bistelligence_health_index.png" alt="BisTelligence Health Index Degradation Curve Result" class="project-img" style="border-radius: 6px;">
                                     </div>
                                 </div>
                             </div>
@@ -388,97 +424,22 @@
             </div>
         </section>
 
-        <!-- Publications Section -->
-        <section id="publications" class="publications section-padding">
+        <!-- Teaching, Corporate Instruction & Awards Section -->
+        <section id="experience" class="teaching section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Publications</h2>
-                    <p class="section-subtitle">Official master's thesis and peer-reviewed journal publications</p>
+                    <h2 class="section-title">Experience, Teaching & Honors</h2>
+                    <p class="section-subtitle">Corporate instruction, university teaching assistance, and national awards</p>
                 </div>
 
-                <div class="publication-list">
-                    <!-- Thesis -->
-                    <div class="pub-card featured">
-                        <div class="pub-type-tag"><i class="fas fa-graduation-cap"></i> Master's Thesis</div>
-                        <h3 class="pub-title">A distribution-based transformer framework for time series missing value imputation</h3>
-                        <p class="pub-authors"><strong>J. Kim</strong>, Jun-Geol Baek</p>
-                        <p class="pub-venue">Master's Thesis, Korea University, Department of Industrial Management and Engineering, 2023</p>
-                        <p class="pub-desc">Formulated a distribution-guided Transformer architecture designed to probabilistically impute unobserved temporal intervals in complex multivariate industrial time-series datasets.</p>
-                    </div>
-
-                    <!-- COVID-19 Paper -->
-                    <div class="pub-card">
-                        <div class="pub-type-tag"><i class="fas fa-journal-whills"></i> Peer-Reviewed Journal</div>
-                        <h3 class="pub-title">Statistical analysis of estimating incubation period distribution and case fatality rate of COVID-19</h3>
-                        <p class="pub-authors">J. Ki, <strong>J. Kim</strong>, S. Kim, J. Park, J. Lee, and Y.-J. Kim</p>
-                        <p class="pub-venue">The Korean Journal of Applied Statistics, 2020</p>
-                        <p class="pub-desc">Rigorous statistical estimation of incubation parameters and mortality risks leveraging clinical cohort databases during the pandemic.</p>
-                    </div>
-
-                    <!-- Breast Cancer Paper -->
-                    <div class="pub-card">
-                        <div class="pub-type-tag"><i class="fas fa-journal-whills"></i> Peer-Reviewed Journal</div>
-                        <h3 class="pub-title">Breast Cancer Subtype Classification Using Multi-omics Data Integration Based on Neural Network</h3>
-                        <p class="pub-authors">Joungmin Choi, Jiyoung Lee, <strong>Jieun Kim</strong>, Jihyun Kim, Heejoon Chae</p>
-                        <p class="pub-venue">Journal of KIISE, 2020</p>
-                        <p class="pub-desc">Neural network framework integrating high-throughput genomic and transcriptomic features for molecular subtype stratification.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Presentations Section -->
-        <section id="presentations" class="presentations section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Presentations</h2>
-                    <p class="section-subtitle">Conference talks and scientific poster presentations</p>
-                </div>
-
-                <div class="presentation-grid">
-                    <div class="pres-card">
-                        <div class="pres-badge">SfN 2025</div>
-                        <h3>Topographic Cortico-Basal Ganglia Computational Model Reveals Motor and Non-motor Symptom Comorbidity in Parkinson’s disease</h3>
-                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> Society for Neuroscience (SfN), 2025</p>
-                    </div>
-
-                    <div class="pres-card">
-                        <div class="pres-badge">KSBNS 2025</div>
-                        <h3>Computational Cortico-Basal Ganglia Model Reveals Altered Spiking Dynamics and Synchronization in Parkinson’s disease</h3>
-                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> The Korean Society for Brain and Neural Sciences (KSBNS), 2025</p>
-                    </div>
-
-                    <div class="pres-card">
-                        <div class="pres-badge">KSBNS 2024</div>
-                        <h3>Spiking Neural Network Modeling of Basal Ganglia for Parkinson’s disease Prognosis and Adaptive DBS</h3>
-                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> The Korean Society for Brain and Neural Sciences (KSBNS), 2024</p>
-                    </div>
-
-                    <div class="pres-card">
-                        <div class="pres-badge">KIIE 2022</div>
-                        <h3>Fuel Cell Vehicle Fuel Efficiency Prediction via Data Refinement and Adversarial Generation</h3>
-                        <p class="pres-conference"><i class="fas fa-calendar-alt"></i> Korean Institute of Industrial Engineers, 2022</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Teaching & Professional Service Section -->
-        <section id="teaching" class="teaching section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title" id="teaching-title-heading">Teaching & Academic Service</h2>
-                    <p class="section-subtitle">Corporate instruction, university teaching assistance, and peer review services</p>
-                </div>
-
-                <div class="grid-2col">
+                <div class="grid-2col" style="margin-bottom: 2.5rem;">
                     <!-- Corporate Instruction -->
                     <div class="service-card">
                         <div class="card-title-icon">
                             <i class="fas fa-chalkboard-teacher"></i>
                             <h3>Corporate Technical Instructor & Teaching Assistant</h3>
                         </div>
-                        <span class="date-badge">May 2024 – Present</span>
+                        <span class="date-badge highlight-date">May 2024 – Present</span>
                         <p class="service-desc">Delivering advanced machine learning, AI programming, and data engineering instruction for enterprise industry partners, primarily conducting technical training for <strong>Samsung Electronics</strong> (and corporate programs for LGES, SK Hynix, Hyundai Steel):</p>
                         <div class="company-logos">
                             <span class="company-pill"><i class="fas fa-building"></i> Samsung Electronics (Primary)</span>
@@ -513,51 +474,47 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Awards & Honors Section -->
-        <section id="awards" class="awards section-padding bg-alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Awards & Honors</h2>
-                    <p class="section-subtitle">National AI & Big Data competition honors and academic distinctions</p>
-                </div>
-
-                <div class="awards-grid">
-                    <div class="award-card highlight-award">
-                        <div class="award-trophy"><i class="fas fa-trophy"></i></div>
-                        <div class="award-details">
-                            <span class="award-rank grand">Grand Prize</span>
-                            <h3>Data-driven Workplace Safety AI Contest</h3>
-                            <p class="award-year">2021</p>
+                <!-- Awards Grid -->
+                <div>
+                    <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-trophy" style="color: var(--primary);"></i> Awards & Honors
+                    </h3>
+                    <div class="awards-grid">
+                        <div class="award-card highlight-award">
+                            <div class="award-trophy"><i class="fas fa-trophy"></i></div>
+                            <div class="award-details">
+                                <span class="award-rank grand">Grand Prize</span>
+                                <h3>Data-driven Workplace Safety AI Contest</h3>
+                                <p class="award-year">2021</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="award-card">
-                        <div class="award-trophy"><i class="fas fa-award"></i></div>
-                        <div class="award-details">
-                            <span class="award-rank special">Special Prize</span>
-                            <h3>National Weather Big Data Contest</h3>
-                            <p class="award-year">2022</p>
+                        <div class="award-card">
+                            <div class="award-trophy"><i class="fas fa-award"></i></div>
+                            <div class="award-details">
+                                <span class="award-rank special">Special Prize</span>
+                                <h3>National Weather Big Data Contest</h3>
+                                <p class="award-year">2022</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="award-card">
-                        <div class="award-trophy"><i class="fas fa-medal"></i></div>
-                        <div class="award-details">
-                            <span class="award-rank third">Excellence Award</span>
-                            <h3>Acoustic Data AI Service Innovation Competition</h3>
-                            <p class="award-year">2021</p>
+                        <div class="award-card">
+                            <div class="award-trophy"><i class="fas fa-medal"></i></div>
+                            <div class="award-details">
+                                <span class="award-rank third">Excellence Award</span>
+                                <h3>Acoustic Data AI Service Innovation Competition</h3>
+                                <p class="award-year">2021</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="award-card">
-                        <div class="award-trophy"><i class="fas fa-certificate"></i></div>
-                        <div class="award-details">
-                            <span class="award-rank paper">Best Paper Award</span>
-                            <h3>Korean Institute of Information Scientists and Engineers (KIISE)</h3>
-                            <p class="award-year">2020</p>
+                        <div class="award-card">
+                            <div class="award-trophy"><i class="fas fa-certificate"></i></div>
+                            <div class="award-details">
+                                <span class="award-rank paper">Best Paper Award</span>
+                                <h3>Korean Institute of Information Scientists and Engineers (KIISE)</h3>
+                                <p class="award-year">2020</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -565,7 +522,7 @@
         </section>
 
         <!-- Technical Skills Section -->
-        <section id="skills" class="skills section-padding">
+        <section id="skills" class="skills section-padding bg-alt">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Technical Skills</h2>
@@ -598,42 +555,30 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact section-padding bg-alt">
+        <section id="contact" class="contact section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Contact</h2>
-                    <p class="section-subtitle">Feel free to connect for research inquiries or academic opportunities</p>
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle">Feel free to reach out for research collaboration, academic inquiries, or technical discussion</p>
                 </div>
 
-                <div class="contact-box">
-                    <div class="contact-info-card">
-                        <div class="contact-method" id="copy-email-btn">
-                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <span class="method-label">Email Address (Click to copy)</span>
-                                <span class="method-value contact-email">jieunkim.cs@gmail.com</span>
-                            </div>
-                        </div>
+                <div class="contact-card-wrapper">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:jieunkim.cs@gmail.com">jieunkim.cs@gmail.com</a></p>
+                    </div>
 
-                        <div class="contact-method">
-                            <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <span class="method-label">Current Affiliation</span>
-                                <span class="method-value">Brain Science Institute, KIST<br>Seoul, South Korea</span>
-                            </div>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/techzzt" target="_blank" rel="noopener">github.com/techzzt</a></p>
+                    </div>
 
-                        <div class="contact-links-grid">
-                            <a href="https://techzzt.github.io/jieunkim" class="social-btn" target="_blank" rel="noopener">
-                                <i class="fas fa-globe"></i> Website
-                            </a>
-                            <a href="https://github.com/techzzt" class="social-btn" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="CV_JieunKim.pdf" class="social-btn" target="_blank" rel="noopener">
-                                <i class="fas fa-file-pdf"></i> Download CV
-                            </a>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <h3>Website</h3>
+                        <p><a href="https://techzzt.github.io/jieunkim/" target="_blank" rel="noopener">techzzt.github.io/jieunkim</a></p>
                     </div>
                 </div>
             </div>
@@ -642,8 +587,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Jieun Kim. All rights reserved.</p>
-            <p class="footer-sub">Researcher in Brain-Inspired AI & Trustworthy Machine Learning</p>
+            <p>&copy; 2026 Jieun Kim. All rights reserved. Designed for Trustworthy ML & Brain-Inspired AI Research.</p>
         </div>
     </footer>
 
