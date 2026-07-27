@@ -439,51 +439,92 @@ body {
     border-color: #cbd5e1;
 }
 
+.section-title::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.interest-badge {
+    background: var(--primary-light);
+    border: 1px solid #bfdbfe;
+    color: var(--primary-hover);
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+}
+
+.interest-badge i {
+    color: var(--primary-color);
+}
+
+.interest-badge:hover {
+    border-color: var(--primary-color);
+    background: #dbeafe;
+}
+
 .project-header-bar {
     padding: 1.5rem 1.75rem;
-    background: #ffffff;
-    color: var(--text-main);
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    border-bottom: 1px solid #f1f5f9;
+}
+
+.project-header-bar.hyundai {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
+}
+
+.project-header-bar.bistelligence {
+    background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%);
 }
 
 .proj-badge {
     display: inline-block;
-    background: #f8fafc;
-    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 0.2rem 0.55rem;
+    padding: 0.25rem 0.65rem;
     border-radius: var(--radius-pill);
-    margin-bottom: 0.3rem;
-    border: 1px solid #e2e8f0;
+    margin-bottom: 0.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
 }
 
 .project-title-area h3 {
     font-size: 1.3rem;
     font-weight: 800;
-    color: var(--text-main);
+    color: #ffffff;
     margin-bottom: 0.2rem;
 }
 
 .proj-subtext {
     font-size: 0.875rem;
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .proj-date-pill {
-    background: #ffffff;
-    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
     padding: 0.3rem 0.75rem;
     border-radius: var(--radius-pill);
     font-size: 0.8rem;
     font-weight: 600;
-    border: 1px solid #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .project-content-body {
