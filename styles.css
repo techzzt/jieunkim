@@ -421,6 +421,7 @@ body {
     padding: 0.2rem 0.55rem;
     border-radius: var(--radius-sm);
     border: 1px solid #e2e8f0;
+    white-space: nowrap;
 }
 
 /* Project Pages Section (Ultraclean Minimalist) */
