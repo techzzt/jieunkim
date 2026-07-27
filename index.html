@@ -97,46 +97,42 @@
                             <span class="date-badge">May 2024 – Feb 2026</span>
                         </div>
                         <div class="card-body">
-                            <div class="research-detail-grid">
-                                <div class="detail-block">
-                                    <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
-                                    <p>Investigating topographic cortico-basal ganglia computational circuits to model the emergence of motor and non-motor symptom comorbidities in Parkinson’s disease (PD). The primary goal is to elucidate how altered spiking dynamics and network-level synchronization degrade information processing in subcortical neural systems.</p>
-                                </div>
-                                <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Methodology</h4>
-                                    <ul class="experience-bullets">
-                                        <li>Constructed large-scale Spiking Neural Networks (SNNs) incorporating biophysically realistic connectivity, topographic projections, and synaptic plasticity mechanisms.</li>
-                                        <li>Quantified population spiking activity and phase-locking neural synchronization across baseline and dopamine-depleted pathological states.</li>
-                                        <li>Identified dynamic neural biomarkers to inform predictive algorithms for closed-loop adaptive Deep Brain Stimulation (aDBS).</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <div class="academic-card-layout">
+                                <div class="card-left-content">
+                                    <div class="research-detail-grid" style="grid-template-columns: 1fr; margin-bottom: 0.75rem;">
+                                        <div class="detail-block" style="padding: 0.85rem; margin-bottom: 0.5rem;">
+                                            <h4><i class="fas fa-bullseye"></i> Research Focus & Objectives</h4>
+                                            <p>Investigating topographic cortico-basal ganglia computational circuits to model the emergence of motor and non-motor symptom comorbidities in Parkinson’s disease (PD). The primary goal is to elucidate how altered spiking dynamics and network-level synchronization degrade information processing in subcortical neural systems.</p>
+                                        </div>
+                                        <div class="detail-block" style="padding: 0.85rem;">
+                                            <h4><i class="fas fa-cogs"></i> Technical & Methodology</h4>
+                                            <ul class="experience-bullets">
+                                                <li>Constructed large-scale Spiking Neural Networks (SNNs) incorporating biophysically realistic connectivity, topographic projections, and synaptic plasticity mechanisms.</li>
+                                                <li>Quantified population spiking activity and phase-locking neural synchronization across baseline and dopamine-depleted pathological states.</li>
+                                                <li>Identified dynamic neural biomarkers to inform predictive algorithms for closed-loop adaptive Deep Brain Stimulation (aDBS).</li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
-                            <div class="project-tech-tags">
-                                <span class="mini-tag">Spiking Neural Networks (SNN)</span>
-                                <span class="mini-tag">Parkinson's Disease Dynamics</span>
-                                <span class="mini-tag">Adaptive DBS</span>
-                                <span class="mini-tag">Neural Synchronization</span>
-                                <span class="mini-tag">Brian2 Simulator</span>
-                            </div>
+                                    <div class="project-tech-tags">
+                                        <span class="mini-tag">Spiking Neural Networks (SNN)</span>
+                                        <span class="mini-tag">Parkinson's Disease Dynamics</span>
+                                        <span class="mini-tag">Adaptive DBS</span>
+                                        <span class="mini-tag">Neural Synchronization</span>
+                                        <span class="mini-tag">Brian2 Simulator</span>
+                                    </div>
 
-                            <!-- KIST Key Result Figures: Circuit Architecture + STN Burst Modulation -->
-                            <div class="project-gallery-grid" style="margin-top: 15px;">
-                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
-                                    <div class="gallery-img-box" style="padding: 0.5rem;">
-                                        <img src="images/kist_circuit_arch.png" alt="CBTC SNN Circuit Architecture: Normal vs Dopamine-Depleted" class="project-img" style="border-radius: 6px;">
+                                    <div style="margin-top: 10px;">
+                                        <a href="KIST_Poster.pdf" class="btn btn-secondary" target="_blank" rel="noopener" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 6px;">
+                                            <i class="fas fa-file-pdf"></i> View Full Research Poster (PDF)
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
-                                    <div class="gallery-img-box" style="padding: 0.5rem;">
-                                        <img src="images/kist_stn_modulation.png" alt="STN Burst Modulation of PD Network Dynamics" class="project-img" style="border-radius: 6px;">
-                                    </div>
+
+                                <!-- Right Side: Single Key Representative Figure -->
+                                <div class="card-right-figure">
+                                    <img src="images/kist_cbtc_circuit.png" alt="KIST Cortico-Basal Ganglia Circuit SNN Architecture & Neural Firing Dynamics Results">
                                 </div>
-                            </div>
-                            <div style="margin-top: 12px; text-align: right;">
-                                <a href="KIST_Poster.pdf" class="btn btn-secondary" target="_blank" rel="noopener" style="font-size: 0.825rem; padding: 0.4rem 0.85rem; border-radius: 6px;">
-                                    <i class="fas fa-file-pdf"></i> View Full Research Poster (PDF)
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -154,43 +150,38 @@
                             <span class="date-badge">Aug 2023 – Feb 2024</span>
                         </div>
                         <div class="card-body">
-                            <div class="research-detail-grid">
-                                <div class="detail-block">
-                                    <h4><i class="fas fa-bullseye"></i> Unsupervised Neural ODE Modeling</h4>
-                                    <p>Developed an unsupervised anomaly detection framework for <strong>unlabeled, irregularly sampled sensor telemetry</strong>. Implemented <strong>continuous-time Neural ODEs</strong> to directly parameterize raw signal dynamics without artificial imputation artifacts.</p>
-                                </div>
-                                <div class="detail-block">
-                                    <h4><i class="fas fa-cogs"></i> Technical & Physical Feature Engineering</h4>
-                                    <ul class="experience-bullets">
-                                        <li><strong>Physical Feature Formulation:</strong>
-                                            <br>&bull; Supply/Return Temperature Differential: $\Delta T_t = T_{\text{return}, t} - T_{\text{supply}, t}$
-                                            <br>&bull; Thermal Transport Ratio: $\text{Heat Flow Ratio}_t = \frac{\Delta T_t}{\text{Flow}_t} = \frac{T_{\text{return}, t} - T_{\text{supply}, t}}{\text{Flow}_t}$
-                                        </li>
-                                        <li><strong>Continuous Latent Dynamics & SRE Scoring:</strong> Integrated continuous-time differential solvers to capture non-stationary sensor trajectories directly, paired with Sub-sequence Reconstruction Error (SRE) scoring for spike anomaly detection (Threshold &gt; 3.8).</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <div class="academic-card-layout">
+                                <div class="card-left-content">
+                                    <div class="research-detail-grid" style="grid-template-columns: 1fr; margin-bottom: 0.75rem;">
+                                        <div class="detail-block" style="padding: 0.85rem; margin-bottom: 0.5rem;">
+                                            <h4><i class="fas fa-bullseye"></i> Unsupervised Neural ODE Modeling</h4>
+                                            <p>Developed an unsupervised anomaly detection framework for <strong>unlabeled, irregularly sampled sensor telemetry</strong>. Implemented <strong>continuous-time Neural ODEs</strong> to directly parameterize raw signal dynamics without artificial imputation artifacts.</p>
+                                        </div>
+                                        <div class="detail-block" style="padding: 0.85rem;">
+                                            <h4><i class="fas fa-cogs"></i> Technical & Physical Feature Engineering</h4>
+                                            <ul class="experience-bullets">
+                                                <li><strong>Physical Feature Formulation:</strong>
+                                                    <br>&bull; Temp Difference: $\Delta T_t = T_{\text{return}, t} - T_{\text{supply}, t}$
+                                                    <br>&bull; Heat Flow Ratio: $\text{Heat Flow Ratio}_t = \frac{\Delta T_t}{\text{Flow}_t}$
+                                                </li>
+                                                <li><strong>Continuous Dynamics & SRE Scoring:</strong> Differential parameterization capturing non-stationary sensor trajectories directly, paired with Sub-sequence Reconstruction Error (SRE) scoring for spike anomaly detection (Threshold &gt; 3.8).</li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
-                            <div class="project-tech-tags">
-                                <span class="mini-tag">Neural ODEs</span>
-                                <span class="mini-tag">Continuous-Time Dynamics</span>
-                                <span class="mini-tag">Unsupervised Learning</span>
-                                <span class="mini-tag">Unlabeled Irregular Series</span>
-                                <span class="mini-tag">Performer Enc-Dec</span>
-                                <span class="mini-tag">SRE Anomaly Scoring</span>
-                            </div>
-
-                            <!-- Georgia Tech Model Pipeline & Result Graph (Vertical Stack) -->
-                            <div class="project-gallery-grid" style="margin-top: 15px; grid-template-columns: 1fr;">
-                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
-                                    <div class="gallery-img-box" style="padding: 0.5rem;">
-                                        <img src="images/gt_model_pipeline.png" alt="Neural ODE Solver Architecture for Irregular Sensor Telemetry" class="project-img" style="border-radius: 6px; max-width: 100%;">
+                                    <div class="project-tech-tags">
+                                        <span class="mini-tag">Neural ODEs</span>
+                                        <span class="mini-tag">Continuous-Time Dynamics</span>
+                                        <span class="mini-tag">Unsupervised Learning</span>
+                                        <span class="mini-tag">Unlabeled Irregular Series</span>
+                                        <span class="mini-tag">Performer Enc-Dec</span>
+                                        <span class="mini-tag">SRE Anomaly Scoring</span>
                                     </div>
                                 </div>
-                                <div class="gallery-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
-                                    <div class="gallery-img-box" style="padding: 0.5rem;">
-                                        <img src="images/gt_sre_anomaly_score.png" alt="SRE Anomaly Scoring: Unsupervised Detection on Unlabeled Sensor Data" class="project-img" style="border-radius: 6px; max-width: 100%;">
-                                    </div>
+
+                                <!-- Right Side: Single Key Representative Figure -->
+                                <div class="card-right-figure">
+                                    <img src="images/gt_model_pipeline.png" alt="Neural ODE Solver Architecture for Irregular Sensor Telemetry">
                                 </div>
                             </div>
                         </div>
@@ -341,11 +332,11 @@
         </section>
 
         <!-- Detailed Key Projects Section (Hyundai & BisTelligence Dedicated Cards) -->
-        <section id="projects" class="projects section-padding bg-alt">
+        <section id="projects" class="projects section-padding">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Industrial Research Projects</h2>
-                    <p class="section-subtitle">Multiple Time-series Anomaly Detection & Predictive Maintenance Systems</p>
+                    <p class="section-subtitle">Cross-domain industrial applications evaluating real-time anomaly detection, model explainability (XAI), and predictive maintenance</p>
                 </div>
 
                 <div class="project-pages-wrapper">
@@ -353,7 +344,7 @@
                     <div class="project-page-card">
                         <div class="project-header-bar hyundai">
                             <div class="project-title-area">
-                                <span class="proj-badge">Project 01</span>
+                                <span class="proj-badge hyundai">Project 01</span>
                                 <h3>Hyundai Motor Group: Sensor Anomaly Detection</h3>
                                 <p class="proj-subtext"><i class="fas fa-car-side"></i> Fuel Cell Vehicle (FCEV) Pre-failure Anomaly Detection & Feature Attribution (2021.07 – 2022.06)</p>
                             </div>
@@ -361,21 +352,28 @@
                         </div>
 
                         <div class="project-content-body">
-                            <div class="project-summary-box">
-                                <h4><i class="fas fa-bullseye"></i> Project Overview</h4>
-                                <ul class="proj-bullets">
-                                    <li><strong>Goal:</strong> Formulate a real-time sensor-based anomaly detection framework for Hydrogen Fuel Cell Vehicles (FCEVs).</li>
-                                    <li><strong>Data Scope:</strong> 386,842 driving-cycle observations (`Driving_Cycle_ID`, 99.8% normal vs. 0.2% abnormal).</li>
-                                    <li><strong>Modeling & XAI:</strong> Trained a One-Class Autoencoder on baseline driving dynamics and integrated SHAP feature attribution to isolate root-cause sensor variables ($X_1 \sim X_5$).</li>
-                                </ul>
-                            </div>
-
-                            <!-- Hyundai Main Result Image -->
-                            <div class="project-gallery-grid">
-                                <div class="gallery-card full-width-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
-                                    <div class="gallery-img-box" style="padding: 0.5rem;">
-                                        <img src="images/hyundai_reconstruction_error.png" alt="Hyundai Autoencoder Reconstruction Error and SHAP Values" class="project-img" style="border-radius: 6px; max-width: 100%; max-height: 400px; object-fit: contain;">
+                            <div class="academic-card-layout">
+                                <div class="card-left-content">
+                                    <div class="project-summary-box" style="margin-bottom: 0.75rem;">
+                                        <h4><i class="fas fa-bullseye"></i> Project Overview</h4>
+                                        <ul class="proj-bullets">
+                                            <li><strong>Goal:</strong> Formulate a real-time sensor-based anomaly detection framework for Hydrogen Fuel Cell Vehicles (FCEVs).</li>
+                                            <li><strong>Data Scope:</strong> 386,842 driving-cycle observations (`Driving_Cycle_ID`, 99.8% normal vs. 0.2% abnormal).</li>
+                                            <li><strong>Modeling & XAI:</strong> Trained a One-Class Autoencoder on baseline driving dynamics and integrated SHAP feature attribution to isolate root-cause sensor variables ($X_1 \sim X_5$).</li>
+                                        </ul>
                                     </div>
+
+                                    <div class="project-tech-tags">
+                                        <span class="mini-tag">One-Class Autoencoder</span>
+                                        <span class="mini-tag">SHAP Feature Attribution</span>
+                                        <span class="mini-tag">Anomaly Detection</span>
+                                        <span class="mini-tag">Industrial Telemetry</span>
+                                    </div>
+                                </div>
+
+                                <!-- Right Side: Single Key Representative Figure -->
+                                <div class="card-right-figure">
+                                    <img src="images/hyundai_reconstruction_error.png" alt="Hyundai Autoencoder Reconstruction Error and SHAP Values">
                                 </div>
                             </div>
                         </div>
@@ -385,7 +383,7 @@
                     <div class="project-page-card">
                         <div class="project-header-bar bistelligence">
                             <div class="project-title-area">
-                                <span class="proj-badge bistel">Project 02</span>
+                                <span class="proj-badge bistelligence">Project 02</span>
                                 <h3>BisTelligence: Industrial Pump RUL & Health Index System</h3>
                                 <p class="proj-subtext"><i class="fas fa-industry"></i> Industrial Pump Remaining Useful Life (RUL) & Condition Monitoring (2022.06 – 2023.01)</p>
                             </div>
@@ -393,21 +391,28 @@
                         </div>
 
                         <div class="project-content-body">
-                            <div class="project-summary-box">
-                                <h4><i class="fas fa-bullseye"></i> Project Overview</h4>
-                                <ul class="proj-bullets">
-                                    <li><strong>Goal:</strong> Build a sensor-driven Remaining Useful Life (RUL) estimation and predictive maintenance system for industrial pumps.</li>
-                                    <li><strong>Data Characteristics:</strong> Accommodated variable sequence lengths (1,100 to 1,850 time steps) resulting from varying operational run-to-failure cycles.</li>
-                                    <li><strong>Modeling:</strong> Formulated an LSTM-Autoencoder Health Index (HI) metric calibrated on initial 30% baseline normal operations.</li>
-                                </ul>
-                            </div>
-
-                            <!-- BisTelligence Main Result Image -->
-                            <div class="project-gallery-grid">
-                                <div class="gallery-card full-width-card" style="border: 1px solid #e2e8f0; background: #ffffff;">
-                                    <div class="gallery-img-box" style="padding: 0.5rem;">
-                                        <img src="images/bistelligence_health_index.png" alt="BisTelligence Health Index Degradation Curve Result" class="project-img" style="border-radius: 6px; max-width: 100%; max-height: 400px; object-fit: contain;">
+                            <div class="academic-card-layout">
+                                <div class="card-left-content">
+                                    <div class="project-summary-box" style="margin-bottom: 0.75rem;">
+                                        <h4><i class="fas fa-bullseye"></i> Project Overview</h4>
+                                        <ul class="proj-bullets">
+                                            <li><strong>Goal:</strong> Build a sensor-driven Remaining Useful Life (RUL) estimation and predictive maintenance system for industrial pumps.</li>
+                                            <li><strong>Data Characteristics:</strong> Accommodated variable sequence lengths (1,100 to 1,850 time steps) resulting from varying operational run-to-failure cycles.</li>
+                                            <li><strong>Modeling:</strong> Formulated an LSTM-Autoencoder Health Index (HI) metric calibrated on initial 30% baseline normal operations.</li>
+                                        </ul>
                                     </div>
+
+                                    <div class="project-tech-tags">
+                                        <span class="mini-tag">LSTM-Autoencoder</span>
+                                        <span class="mini-tag">Health Index (HI)</span>
+                                        <span class="mini-tag">Predictive Maintenance</span>
+                                        <span class="mini-tag">RUL Estimation</span>
+                                    </div>
+                                </div>
+
+                                <!-- Right Side: Single Key Representative Figure -->
+                                <div class="card-right-figure">
+                                    <img src="images/bistelligence_health_index.png" alt="BisTelligence Health Index Degradation Curve Result">
                                 </div>
                             </div>
                         </div>
