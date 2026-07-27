@@ -192,6 +192,7 @@ body {
     color: var(--text-muted);
     margin-bottom: 1.25rem;
     line-height: 1.75;
+    text-align: justify;
 }
 
 /* Interest Badges */
