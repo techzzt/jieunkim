@@ -18,3 +18,7 @@ Thumbs.db
 # Dependencies (if using npm in future)
 node_modules/
 package-lock.json 
+
+# Figure scripts stay local: they reference raw data paths and building IDs
+figures/
+__pycache__/
