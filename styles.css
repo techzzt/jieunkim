@@ -510,11 +510,11 @@ body {
 }
 
 .project-header-bar.hyundai .project-title-area h3 {
-    color: #2563eb;
+    color: var(--text-main);
 }
 
 .project-header-bar.bistelligence .project-title-area h3 {
-    color: #2563eb;
+    color: var(--text-main);
 }
 
 .proj-badge {
@@ -808,7 +808,7 @@ body {
 /* Teaching & Service Section */
 .grid-2col {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.95fr 1.05fr;  /* sized so neither card wraps at full width */
     gap: 1.25rem;
 }
 
@@ -816,7 +816,7 @@ body {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: var(--radius-lg);
-    padding: 1.5rem;
+    padding: 1.25rem;
 }
 
 .card-title-icon {
@@ -832,7 +832,7 @@ body {
 }
 
 .card-title-icon h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
@@ -884,9 +884,20 @@ body {
 }
 
 .simple-list li {
-    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     margin-bottom: 0.3rem;
+}
+
+.simple-list .item-date {
+    flex-shrink: 0;
+    white-space: nowrap;
+    color: var(--text-light);
+    font-variant-numeric: tabular-nums;
 }
 
 /* Awards Section */
@@ -1239,7 +1250,7 @@ body {
 }
 
 .project-header-bar.dacon .project-title-area h3 {
-    color: #2563eb;
+    color: var(--text-main);
 }
 
 .proj-badge.dacon {
