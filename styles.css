@@ -1303,7 +1303,7 @@ body {
 /* Blog: Medium post cards (add more <a class="post-card"> to grow the grid) */
 .post-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.25rem;
 }
 

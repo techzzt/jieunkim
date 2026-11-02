@@ -120,3 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Blog: show the newest Medium post (data/latest-post.json is refreshed daily by a GitHub Action)
+document.addEventListener('DOMContentLoaded', function() {
+    const card = document.getElementById('latest-post');
+    if (!card) return;
+    fetch('data/latest-post.json', { cache: 'no-cache' })
+        .then(res => res.ok ? res.json() : Promise.reject(res.status))
+        .then(post => {
+            card.href = post.url;
+            card.querySelector('.post-title').textContent = post.title;
+            card.querySelector('.post-desc').textContent = post.excerpt;
+            card.querySelector('.post-meta').textContent = post.date + ' · Medium';
+        })
+        .catch(() => {});  // keep the post already in the HTML
+});
